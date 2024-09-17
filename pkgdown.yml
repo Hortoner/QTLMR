@@ -1,0 +1,9 @@
+pandoc: 3.1.11
+pkgdown: 2.1.0
+pkgdown_sha: ~
+articles:
+  1.跨组织转录组关联研究寻找疾病易感基因: 1.跨组织转录组关联研究寻找疾病易感基因.html
+last_built: 2024-09-17T12:57Z
+urls:
+  reference: https://qtlmr.pages.dev/reference
+  article: https://qtlmr.pages.dev/articles
