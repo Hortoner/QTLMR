@@ -2,7 +2,7 @@
 
 **&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系作者：Dr.H E-mail: 2214047750@qq.com**
 <br><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在现代生物医学研究中，理解基因与疾病之间的因果关系是发现新的治疗靶点的关键；通过Post GWAS与多组学孟德尔随机化分析，能更好探究疾病发病的病理生理机制。QTLMR是一个功能强大的R语言包，整合了MR、共定位、SMR、MTAG、Hess、METAL、LDSC、CPASSOC、PLACO和TWAS分析等多种算法。这些方法共同为快速识别疾病发病的诱因、治疗的潜在靶点提供了一体化的解决方案。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在现代生物医学研究中，理解基因与疾病之间的因果关系是发现新的治疗靶点的关键；通过Post GWAS与多组学孟德尔随机化分析，能更好探究疾病发病的病理生理机制。QTLMR是一个功能强大的R语言包，整合了MR、共定位、SMR、MTAG、Hess、METAL、LDSC、CPASSOC、PLACO和TWAS分析等多种算法及多种可视化绘图功能。这些方法共同为快速识别疾病发病的诱因、治疗的潜在靶点提供了一体化的解决方案。
 <br><br>
 
 ### R语言集合软件包安装与更新:
@@ -22,6 +22,9 @@ QTLMRget::getToken()
 ##在线安装；老用户无需重复授权，可直接更新QTLMR包。
 QTLMRget::install_QTLMR()
 
+##配置Rtools、OPENGWAS_JWT与GITHUB_TOKEN的token##
+QTLMR::install_token(OPENGWAS_JWT = " ", GITHUB_TOKEN = NULL)
+
 ##安装QTLMR相关依赖包；可重复多次运行该函数，直到所有依赖包安装成功。
 QTLMRget::install_QTLMR_dependence()
 
@@ -33,9 +36,9 @@ help(package = QTLMR)
 ```
 
 <br>
-论文复现教学视频:&nbsp;&nbsp;&nbsp;&nbsp;https://b23.tv/1kbNqFk
+**论文复现教学视频:&nbsp;&nbsp;&nbsp;&nbsp;<https://b23.tv/1kbNqFk>**
 <br>
-论文复现示例代码:&nbsp;&nbsp;&nbsp;&nbsp;https://hortoner.github.io/QTLMR/articles/index.html
+**论文复现示例代码:&nbsp;&nbsp;&nbsp;&nbsp;<https://qtlmr.pages.dev/articles/>**
 <br><br>
 
 
@@ -66,8 +69,11 @@ help(package = QTLMR)
     -   FUSION: 整合表型和功能数据，估计基因遗传效应的工具；
     -   UTMOST: 跨组织GWAS分析，探索基因表达对表型影响；
     -   FUCUS: 基于功能注释精细定位GWAS信号，提高复杂性状变异鉴定；
+    -   MR-JTI: 从基因型数据推导多个组织的基因表达水平，从而做TWAS和MR分析；
     -   MAGMA: 基因和基因集分析工具，适用于大规模多标记关联研究；
     -   已适当优化软件底层代码，减少报错，提高兼容性。
+    
+    
     
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QTLMR包为研究人员提供了一套完整且强大的工具，用于揭示基因与疾病之间的因果关系。通过整合MR、共定位、SMR & HEIDI、MTAG、Hess、METAL、LDSC、CPASSOC、PLACO和TWAS分析分析等多种算法，QTLMR包帮助研究人员快速识别疾病的潜在治疗靶点。如果你致力于理解基因与疾病的关系并寻找新的治疗靶点或探索疾病发病机制，QTLMR包将是您的理想选择，祝君科研顺利！
