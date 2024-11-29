@@ -33,9 +33,9 @@ help(package = QTLMR)
 ```
 
 <br>
-**论文复现教学视频:&nbsp;&nbsp;&nbsp;&nbsp;<https://b23.tv/1kbNqFk>**
+论文复现教学视频:https://b23.tv/1kbNqFk
 <br>
-**论文复现示例代码:&nbsp;&nbsp;&nbsp;&nbsp;<https://hortoner.github.io/QTLMR/articles/index.html>**
+论文复现示例代码:https://hortoner.github.io/QTLMR/articles/index.html
 <br><br>
 
 
