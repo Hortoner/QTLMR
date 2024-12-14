@@ -6,6 +6,8 @@
 <url><loc>https://hortoner.github.io/QTLMR/index.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/news/index.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/available_outcomes_ieu.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/Baidu_download.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/Baidu_py_install.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/calculation_Fvalue_R2.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/clump_data_local_Online.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/clump_LD_R2.html</loc></url>
@@ -71,6 +73,7 @@
 <url><loc>https://hortoner.github.io/QTLMR/reference/install_Rtools.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/JTI_predixcan_test.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/JTI_SPrediXcan_test.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/LAVA_bivarplot.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/LAVA_run.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/LAVA_sample_overlap.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/LDSC_ldscr_h2.html</loc></url>
@@ -107,6 +110,9 @@
 <url><loc>https://hortoner.github.io/QTLMR/reference/SMR_format_BESD.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/SMR_Locus_Effect_Plot.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/SMR_multi_HEIDI.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/SUPERGNOVA_format_data.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/SUPERGNOVA_py_install.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/SUPERGNOVA_run.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/tran_chrpos_from_SNP.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/tran_SNP_from_chrpos.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/TWAS_FOCUS_format_data.html</loc></url>
