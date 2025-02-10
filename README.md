@@ -6,7 +6,7 @@
 GCTA_fastBAT、MAGMA、MR-JTI 和 TWAS 分析等多种算法及多种可视化绘图功能。这些方法共同为快速识别疾病发病的诱因、治疗的潜在靶点提供了一体化的解决方案。
 <br>
 
-#### 更多内容，请关注微信公众号:落叶随风的笔记
+#### 更多内容，请关注微信公众号:落叶随风的笔记 https://mp.weixin.qq.com/s/U45PmUPSLI0nkDdIn027Tg
 
 <br>
 
