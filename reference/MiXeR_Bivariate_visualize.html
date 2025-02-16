@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.14</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.23</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -128,6 +128,18 @@
     <p>返回分析结果数据。</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">MiXeR_Bivariate_visualize</span><span class="op">(</span></span></span>
+<span class="r-in"><span>   json_fit <span class="op">=</span> <span class="st">"./VS/SSGAC_EDU_2018_no23andMe_noMHC_vs_SCZ_qc_noMHC.fit.rep@.json"</span>,</span></span>
+<span class="r-in"><span>   json_test <span class="op">=</span> <span class="st">"./VS/SSGAC_EDU_2018_no23andMe_noMHC_vs_SCZ_qc_noMHC.test.rep@.json"</span>,</span></span>
+<span class="r-in"><span>   mixer_py <span class="op">=</span> <span class="st">"~/mixer/precimed/mixer_figures.py"</span>,</span></span>
+<span class="r-in"><span>   statistic <span class="op">=</span> <span class="st">"mean std"</span>,</span></span>
+<span class="r-in"><span>   save_name <span class="op">=</span> <span class="st">"VS"</span>,</span></span>
+<span class="r-in"><span>   save_path <span class="op">=</span> <span class="st">"./combined"</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> 正在进行双变量跨性状分析可视化绘图，请稍后...</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> Unable to find conda binary. Is Anaconda installed?</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -135,7 +147,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by H YB.</p>
+  <p>Developed by YB H.</p>
 </div>
 
 <div class="pkgdown-footer-right">

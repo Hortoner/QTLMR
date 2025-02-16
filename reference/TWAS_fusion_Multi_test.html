@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.14</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.23</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,9 +54,6 @@
 <span>  PANELN <span class="op">=</span> <span class="cn">NA</span>,</span>
 <span>  opt_arguments <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  remove_MHC <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  Manhtn_plot <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>  Manhtn_pval_sig <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  Manhtn_gene_sig <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>  FDR_method <span class="op">=</span> <span class="st">"bonferroni"</span>,</span>
 <span>  save_name <span class="op">=</span> <span class="st">"SCZ"</span>,</span>
 <span>  save_path <span class="op">=</span> <span class="st">"./SCZ"</span>,</span>
@@ -120,18 +117,6 @@
 <dd><p>是否移除MHC区域的SNP。</p></dd>
 
 
-<dt id="arg-manhtn-plot">Manhtn_plot<a class="anchor" aria-label="anchor" href="#arg-manhtn-plot"></a></dt>
-<dd><p>是否在当前路径下绘制FUSION结果曼哈顿图。</p></dd>
-
-
-<dt id="arg-manhtn-pval-sig">Manhtn_pval_sig<a class="anchor" aria-label="anchor" href="#arg-manhtn-pval-sig"></a></dt>
-<dd><p>曼哈顿图的显著性阈值的虚线所在Y轴的位置，默认NULL时设置为"bonferroni"矫正的阈值，可自定义显著性阈值。</p></dd>
-
-
-<dt id="arg-manhtn-gene-sig">Manhtn_gene_sig<a class="anchor" aria-label="anchor" href="#arg-manhtn-gene-sig"></a></dt>
-<dd><p>曼哈顿图中使用标签标记基因的数量，默认标记前10个基因，如果填"all"，则标记所有显著基因。</p></dd>
-
-
 <dt id="arg-fdr-method">FDR_method<a class="anchor" aria-label="anchor" href="#arg-fdr-method"></a></dt>
 <dd><p>对TWAS.P值进行FDR矫正方法，"fdr"或"bonferroni"，默认"bonferroni"，若填NULL则不进行FDR矫正。</p></dd>
 
@@ -162,7 +147,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by H YB.</p>
+  <p>Developed by YB H.</p>
 </div>
 
 <div class="pkgdown-footer-right">

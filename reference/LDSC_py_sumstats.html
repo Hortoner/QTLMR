@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.14</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.23</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,6 +44,8 @@
 <span>  GWASfile <span class="op">=</span> <span class="st">" "</span>,</span>
 <span>  GWAS_name <span class="op">=</span> <span class="st">" "</span>,</span>
 <span>  N <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  MAF_min <span class="op">=</span> <span class="fl">0.01</span>,</span>
+<span>  opt_arguments <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  merge_alleles <span class="op">=</span> <span class="st">" "</span>,</span>
 <span>  save_path <span class="op">=</span> <span class="st">"./"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
@@ -65,6 +67,14 @@
 <dd><p>GWAS的样本量大小，如果TwosampelMR格式数据文件缺失样本量则需填写，默认NULL。</p></dd>
 
 
+<dt id="arg-maf-min">MAF_min<a class="anchor" aria-label="anchor" href="#arg-maf-min"></a></dt>
+<dd><p>最小次要等位基因频率，默认0.01。</p></dd>
+
+
+<dt id="arg-opt-arguments">opt_arguments<a class="anchor" aria-label="anchor" href="#arg-opt-arguments"></a></dt>
+<dd><p>ldsc软件munge_sumstats.py的其他命令行参数，默认NULL。</p></dd>
+
+
 <dt id="arg-merge-alleles">merge_alleles<a class="anchor" aria-label="anchor" href="#arg-merge-alleles"></a></dt>
 <dd><p>带有alt、ref和rsid的snp文件的路径，用于将性状(性状)间的等位基因进行对齐，例如：w_hm3.snplist。</p></dd>
 
@@ -83,7 +93,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by H YB.</p>
+  <p>Developed by YB H.</p>
 </div>
 
 <div class="pkgdown-footer-right">

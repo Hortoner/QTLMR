@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.14</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.23</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,6 +93,18 @@
     <p>返回格式化和质控后的文件，适用于MiXeR分析。</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">MiXeR_format_dat</span><span class="op">(</span>GWASfile <span class="op">=</span> <span class="st">"./ieu-a-30_MTAG_IEU.txt"</span>,</span></span>
+<span class="r-in"><span>                 ncase <span class="op">=</span> <span class="fl">5956</span>,</span></span>
+<span class="r-in"><span>                 ncontrol <span class="op">=</span> <span class="fl">14927</span>,</span></span>
+<span class="r-in"><span>                 opt_arguments_csv <span class="op">=</span> <span class="cn">NULL</span>,</span></span>
+<span class="r-in"><span>                 opt_arguments_qc <span class="op">=</span> <span class="cn">NULL</span>,</span></span>
+<span class="r-in"><span>                 exclude_ranges <span class="op">=</span> <span class="st">"6:26000000-34000000"</span>,</span></span>
+<span class="r-in"><span>                 save_name <span class="op">=</span> <span class="st">"CD"</span>,</span></span>
+<span class="r-in"><span>                 save_path <span class="op">=</span> <span class="st">"./CD_dat"</span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> 正在格式转换，请稍后...</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> Unable to find conda binary. Is Anaconda installed?</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -100,7 +112,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by H YB.</p>
+  <p>Developed by YB H.</p>
 </div>
 
 <div class="pkgdown-footer-right">
