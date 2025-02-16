@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.14</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.23</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -463,6 +463,12 @@
 
       <dl><dt>
 
+          <code><a href="PWCOCO_Coloc_dat.html">PWCOCO_Coloc_dat()</a></code>
+
+        </dt>
+        <dd>PWCOCO与Coloc分析的基因组区域数据提取</dd>
+      </dl><dl><dt>
+
           <code><a href="coloc_GWAS.html">coloc_GWAS()</a></code>
 
         </dt>
@@ -473,6 +479,12 @@
 
         </dt>
         <dd>绘制stack_assoc_plot图</dd>
+      </dl><dl><dt>
+
+          <code><a href="PWCOCO_run.html">PWCOCO_run()</a></code>
+
+        </dt>
+        <dd>使用PWCOCO进行成对条件与共定位分析</dd>
       </dl></div><div class="section level2">
 
       <h3 id="-smr-">10.SMR分析<a class="anchor" aria-label="anchor" href="#-smr-"></a></h3>
@@ -615,7 +627,30 @@
         <dd>使用HDL包多核进行遗传相关性的高精度似然推断</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-lava-">14.LAVA分析<a class="anchor" aria-label="anchor" href="#-lava-"></a></h3>
+      <h3 id="-gnova-run-">14.GNOVA_run分析<a class="anchor" aria-label="anchor" href="#-gnova-run-"></a></h3>
+
+
+
+    </div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="GNOVA_py_install.html">GNOVA_py_install()</a></code>
+
+        </dt>
+        <dd>配置GNOVA软件环境</dd>
+      </dl><dl><dt>
+
+          <code><a href="GNOVA_run.html">GNOVA_run()</a></code>
+
+        </dt>
+        <dd>使用GNOVA进行遗传协方差分析</dd>
+      </dl></div><div class="section level2">
+
+      <h3 id="-lava-">15.LAVA分析<a class="anchor" aria-label="anchor" href="#-lava-"></a></h3>
 
 
 
@@ -644,7 +679,7 @@
         <dd>绘制双变量LAVA分析结果的散点图</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-supergnova-">15.SUPERGNOVA分析<a class="anchor" aria-label="anchor" href="#-supergnova-"></a></h3>
+      <h3 id="-supergnova-">16.SUPERGNOVA分析<a class="anchor" aria-label="anchor" href="#-supergnova-"></a></h3>
 
 
 
@@ -673,7 +708,7 @@
         <dd>使用 SUPERGNOVA 进行局部遗传相关性分析</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-hess-">16.HESS分析<a class="anchor" aria-label="anchor" href="#-hess-"></a></h3>
+      <h3 id="-hess-">17.HESS分析<a class="anchor" aria-label="anchor" href="#-hess-"></a></h3>
 
 
 
@@ -738,7 +773,7 @@
         <dd>使用HESS软件绘制性状之间多基因性对比度的图</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-mixer-linux-">17.MiXeR分析（linux系统）<a class="anchor" aria-label="anchor" href="#-mixer-linux-"></a></h3>
+      <h3 id="-mixer-linux-">18.MiXeR分析（linux系统）<a class="anchor" aria-label="anchor" href="#-mixer-linux-"></a></h3>
 
 
 
@@ -783,9 +818,15 @@
 
         </dt>
         <dd>MiXeR双变量跨性状分析可视化</dd>
+      </dl><dl><dt>
+
+          <code><a href="MiXeR_run.html">MiXeR_run()</a></code>
+
+        </dt>
+        <dd>MiXeR分析</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-twas-">18.TWAS分析<a class="anchor" aria-label="anchor" href="#-twas-"></a></h3>
+      <h3 id="-twas-">19.TWAS分析<a class="anchor" aria-label="anchor" href="#-twas-"></a></h3>
 
 
 
@@ -862,7 +903,7 @@
         <dd>使用FOCUS软件进行TWAS的基因-性状关联信号精细定位分析</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-mr-jti-">19.MR-JTI分析<a class="anchor" aria-label="anchor" href="#-mr-jti-"></a></h3>
+      <h3 id="-mr-jti-">20.MR-JTI分析<a class="anchor" aria-label="anchor" href="#-mr-jti-"></a></h3>
 
 
 
@@ -897,7 +938,7 @@
         <dd>计算MR_JTI结果的beta值及95% CI</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-magma-">20.MAGMA分析<a class="anchor" aria-label="anchor" href="#-magma-"></a></h3>
+      <h3 id="-magma-">21.MAGMA分析<a class="anchor" aria-label="anchor" href="#-magma-"></a></h3>
 
 
 
@@ -932,7 +973,24 @@
         <dd>绘制MAGMA分析结果柱状图</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-gwas-meta-">21.GWAS meta及跨性状关联分析<a class="anchor" aria-label="anchor" href="#-gwas-meta-"></a></h3>
+      <h3 id="-gcta-">22.GCTA分析<a class="anchor" aria-label="anchor" href="#-gcta-"></a></h3>
+
+
+
+    </div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="GCTA_fastBAT.html">GCTA_fastBAT()</a></code>
+
+        </dt>
+        <dd>基于GCTA_fastBAT的gene-based关联分析研究</dd>
+      </dl></div><div class="section level2">
+
+      <h3 id="-gwas-meta-">23.GWAS meta及跨性状关联分析<a class="anchor" aria-label="anchor" href="#-gwas-meta-"></a></h3>
 
 
 
@@ -979,7 +1037,7 @@
         <dd>使用PLACO进行复合零假设下的多效性分析</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="--5">22.其它分析功能<a class="anchor" aria-label="anchor" href="#--5"></a></h3>
+      <h3 id="-fm-summary-">24.FM_summary分析<a class="anchor" aria-label="anchor" href="#-fm-summary-"></a></h3>
 
 
 
@@ -989,6 +1047,29 @@
 
 
       <dl><dt>
+
+          <code><a href="FM_summary.html">FM_summary()</a></code>
+
+        </dt>
+        <dd>简化的贝叶斯精细映射方法（FM-summary）</dd>
+      </dl></div><div class="section level2">
+
+      <h3 id="--5">25.其它分析功能<a class="anchor" aria-label="anchor" href="#--5"></a></h3>
+
+
+
+    </div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="LCV_run.html">LCV_run()</a></code>
+
+        </dt>
+        <dd>潜在因果变量分析(LCV)</dd>
+      </dl><dl><dt>
 
           <code><a href="find_Confounders_ensembl.html">find_Confounders_ensembl()</a></code>
 
@@ -1042,7 +1123,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by H YB.</p>
+  <p>Developed by YB H.</p>
 </div>
 
 <div class="pkgdown-footer-right">

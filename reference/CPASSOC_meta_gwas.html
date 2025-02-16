@@ -9,7 +9,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.14</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.23</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,10 @@
 <span>  mvrnorm_n <span class="op">=</span> <span class="fl">1e+06</span>,</span>
 <span>  methods_sig <span class="op">=</span> <span class="st">"SHet"</span>,</span>
 <span>  sig_pval <span class="op">=</span> <span class="fl">5e-08</span>,</span>
-<span>  filer_Zscores <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>  bfile <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  window_kb <span class="op">=</span> <span class="fl">500</span>,</span>
+<span>  step_SNP <span class="op">=</span> <span class="fl">50</span>,</span>
+<span>  r2 <span class="op">=</span> <span class="fl">0.2</span>,</span>
 <span>  save_name <span class="op">=</span> <span class="st">"CPASSOC"</span>,</span>
 <span>  save_path <span class="op">=</span> <span class="st">"./CPASSOC"</span>,</span>
 <span>  cores <span class="op">=</span> <span class="fl">4</span></span>
@@ -85,8 +88,20 @@
 <dd><p>跨性状关联分析SNP的显著性阈值，默认5e-8。</p></dd>
 
 
-<dt id="arg-filer-zscores">filer_Zscores<a class="anchor" aria-label="anchor" href="#arg-filer-zscores"></a></dt>
-<dd><p>是否过滤Z-scores绝对值大于1.96的SNP，默认TRUE。</p></dd>
+<dt id="arg-bfile">bfile<a class="anchor" aria-label="anchor" href="#arg-bfile"></a></dt>
+<dd><p>对SNP进行成对LD修剪时，参考面板数据的文件路径。若设置为NULL，则不进行成对不修剪。</p></dd>
+
+
+<dt id="arg-window-kb">window_kb<a class="anchor" aria-label="anchor" href="#arg-window-kb"></a></dt>
+<dd><p>成对LD修剪时窗口大小，默认500kb。</p></dd>
+
+
+<dt id="arg-step-snp">step_SNP<a class="anchor" aria-label="anchor" href="#arg-step-snp"></a></dt>
+<dd><p>成对LD修剪时,每一步移动窗口的SNP数量，默认50。</p></dd>
+
+
+<dt id="arg-r-">r2<a class="anchor" aria-label="anchor" href="#arg-r-"></a></dt>
+<dd><p>成对LD修剪时,表示r²（连锁不平衡的平方相关系数）的阈值。</p></dd>
 
 
 <dt id="arg-save-name">save_name<a class="anchor" aria-label="anchor" href="#arg-save-name"></a></dt>
@@ -111,7 +126,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by H YB.</p>
+  <p>Developed by YB H.</p>
 </div>
 
 <div class="pkgdown-footer-right">

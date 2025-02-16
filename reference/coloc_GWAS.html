@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.14</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.23</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,39 +86,39 @@
 
 
 <dt id="arg-type-exposure">type_exposure<a class="anchor" aria-label="anchor" href="#arg-type-exposure"></a></dt>
-<dd><p>暴露数据GWAS类型，默认为"quant"，表示连续型数据。</p></dd>
+<dd><p>暴露数据GWAS类型，"quant"或"cc"，"quant"表示连续型数据，"cc"表示二分类型数据，默认为"quant"。</p></dd>
 
 
 <dt id="arg-col-pvalues-exposure">col_pvalues_exposure<a class="anchor" aria-label="anchor" href="#arg-col-pvalues-exposure"></a></dt>
-<dd><p>暴露数据GWAS中p值所在的列的名称，默认为"pval"。</p></dd>
+<dd><p>必填，暴露数据GWAS中p值所在的列的名称，默认为"pval"。</p></dd>
 
 
 <dt id="arg-col-n-exposure">col_N_exposure<a class="anchor" aria-label="anchor" href="#arg-col-n-exposure"></a></dt>
-<dd><p>暴露数据GWAS中样本量所在的列的名称，默认为"N"。</p></dd>
+<dd><p>必填，暴露数据GWAS中样本量所在的列的名称，默认为"N"。</p></dd>
 
 
 <dt id="arg-col-maf-exposure">col_MAF_exposure<a class="anchor" aria-label="anchor" href="#arg-col-maf-exposure"></a></dt>
-<dd><p>暴露数据GWAS中次要等位基因频率所在的列的名称，默认为"MAF"。</p></dd>
+<dd><p>必填，暴露数据GWAS中次要等位基因频率所在的列的名称，默认为"MAF"。</p></dd>
 
 
 <dt id="arg-col-beta-exposure">col_beta_exposure<a class="anchor" aria-label="anchor" href="#arg-col-beta-exposure"></a></dt>
-<dd><p>暴露数据GWAS中beta系数所在的列的名称，默认为"beta"。</p></dd>
+<dd><p>必填，暴露数据GWAS中beta系数所在的列的名称，默认为"beta"。</p></dd>
 
 
 <dt id="arg-col-se-exposure">col_se_exposure<a class="anchor" aria-label="anchor" href="#arg-col-se-exposure"></a></dt>
-<dd><p>暴露数据GWAS中标准误差所在的列的名称，默认为"se"。</p></dd>
+<dd><p>必填，暴露数据GWAS中标准误差所在的列的名称，默认为"se"。</p></dd>
 
 
 <dt id="arg-col-snp-exposure">col_snp_exposure<a class="anchor" aria-label="anchor" href="#arg-col-snp-exposure"></a></dt>
-<dd><p>暴露数据GWAS中SNP标识所在的列的名称，默认为"SNP"。</p></dd>
+<dd><p>必填，暴露数据GWAS中SNP标识所在的列的名称，默认为"SNP"。</p></dd>
 
 
 <dt id="arg-col-chr-exposure">col_chr_exposure<a class="anchor" aria-label="anchor" href="#arg-col-chr-exposure"></a></dt>
-<dd><p>暴露数据GWAS中chr标识所在的列的名称，默认为"CHR"，若不准备Stacked regional plot数据可不填。</p></dd>
+<dd><p>非必填，暴露数据GWAS中chr标识所在的列的名称，默认为"CHR"，若不准备Stacked regional plot数据可不填。</p></dd>
 
 
 <dt id="arg-col-pos-exposure">col_pos_exposure<a class="anchor" aria-label="anchor" href="#arg-col-pos-exposure"></a></dt>
-<dd><p>暴露数据GWAS中pos标识所在的列的名称，默认为"BP"，若不准备Stacked regional plot数据可不填。</p></dd>
+<dd><p>非必填，暴露数据GWAS中pos标识所在的列的名称，默认为"BP"，若不准备Stacked regional plot数据可不填。</p></dd>
 
 
 <dt id="arg-sd-exposure">sd_exposure<a class="anchor" aria-label="anchor" href="#arg-sd-exposure"></a></dt>
@@ -126,31 +126,31 @@
 
 
 <dt id="arg-type-outcome">type_outcome<a class="anchor" aria-label="anchor" href="#arg-type-outcome"></a></dt>
-<dd><p>结局数据GWAS的类型，默认为"cc"，表示二分类型数据。</p></dd>
+<dd><p>结局数据GWAS的类型，"quant"或"cc"，"quant"表示连续型数据，"cc"表示二分类型数据，默认为"cc"。</p></dd>
 
 
 <dt id="arg-col-pvalues-outcome">col_pvalues_outcome<a class="anchor" aria-label="anchor" href="#arg-col-pvalues-outcome"></a></dt>
-<dd><p>结局数据GWAS中p值所在的列的名称，默认为"pval.outcome"。</p></dd>
+<dd><p>必填，结局数据GWAS中p值所在的列的名称，默认为"pval.outcome"。</p></dd>
 
 
 <dt id="arg-col-n-outcome">col_N_outcome<a class="anchor" aria-label="anchor" href="#arg-col-n-outcome"></a></dt>
-<dd><p>结局数据GWAS中样本大小所在的列的名称，默认为"samplesize.outcome"。</p></dd>
+<dd><p>必填，结局数据GWAS中样本大小所在的列的名称，默认为"samplesize.outcome"。</p></dd>
 
 
 <dt id="arg-col-maf-outcome">col_MAF_outcome<a class="anchor" aria-label="anchor" href="#arg-col-maf-outcome"></a></dt>
-<dd><p>结局数据GWAS中最小等位基因频率所在的列的名称，默认为NA。</p></dd>
+<dd><p>非必填，结局数据GWAS中最小等位基因频率所在的列的名称，默认NA。</p></dd>
 
 
 <dt id="arg-col-beta-outcome">col_beta_outcome<a class="anchor" aria-label="anchor" href="#arg-col-beta-outcome"></a></dt>
-<dd><p>结局数据GWAS中beta系数所在的列的名称，默认为"beta.outcome"。</p></dd>
+<dd><p>必填，结局数据GWAS中beta系数所在的列的名称，默认为"beta.outcome"。</p></dd>
 
 
 <dt id="arg-col-se-outcome">col_se_outcome<a class="anchor" aria-label="anchor" href="#arg-col-se-outcome"></a></dt>
-<dd><p>结局数据GWAS中标准误差所在的列的名称，默认为"se.outcome"。</p></dd>
+<dd><p>必填，结局数据GWAS中标准误差所在的列的名称，默认为"se.outcome"。</p></dd>
 
 
 <dt id="arg-col-snp-outcome">col_snp_outcome<a class="anchor" aria-label="anchor" href="#arg-col-snp-outcome"></a></dt>
-<dd><p>结局数据GWAS中SNP标识所在的列的名称，默认为"SNP"。</p></dd>
+<dd><p>必填，结局数据GWAS中SNP标识所在的列的名称，默认为"SNP"。</p></dd>
 
 
 <dt id="arg-prevalence-outcome">prevalence_outcome<a class="anchor" aria-label="anchor" href="#arg-prevalence-outcome"></a></dt>
@@ -203,7 +203,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by H YB.</p>
+  <p>Developed by YB H.</p>
 </div>
 
 <div class="pkgdown-footer-right">
