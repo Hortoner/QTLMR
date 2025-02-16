@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.14</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.23</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,15 +34,41 @@
     </div>
 
     <div class="section level2">
+<h2 class="pkg-version" data-toc-text="2.2" id="qtlmr-v22">QTLMR v2.2<a class="anchor" aria-label="anchor" href="#qtlmr-v22"></a></h2>
+<p>(更新日期: 2025-2-16)</p>
+<ul><li>1.增加函数功能：
+<ul><li>
+<code>MiXeR_run</code>一键式进行MiXeR分析；</li>
+<li>
+<code><a href="../reference/FM_summary.html">FM_summary()</a></code>简化的贝叶斯精细映射方法（FM-summary）；</li>
+<li>
+<code><a href="../reference/GCTA_fastBAT.html">GCTA_fastBAT()</a></code>基于GCTA_fastBAT的gene-based关联分析研究；</li>
+<li>
+<code><a href="../reference/GNOVA_run.html">GNOVA_run()</a></code>使用GNOVA进行遗传协方差分析；</li>
+<li>
+<code><a href="../reference/LCV_run.html">LCV_run()</a></code>进行潜在因果变量分析；</li>
+<li>
+<code><a href="../reference/PWCOCO_Coloc_dat.html">PWCOCO_Coloc_dat()</a></code>PWCOCO与Coloc分析基因组区域数据提取；</li>
+<li>
+<code><a href="../reference/PWCOCO_run.html">PWCOCO_run()</a></code>使用PWCOCO进行成对条件与共定位分析。</li>
+</ul></li>
+<li>2.完善CPASSOC函数功能：
+<ul><li>
+<code><a href="../reference/CPASSOC_meta_gwas.html">CPASSOC_meta_gwas()</a></code> 根据PMID: 28980259文献，完善对SNP进行成对LD修剪，默认过滤Z-scores绝对值大于1.96的SNP。</li>
+</ul></li>
+<li>3.剔除FUSION函数绘制曼哈顿图参数。</li>
+<li>4.其它函数优化修复。</li>
+</ul></div>
+    <div class="section level2">
 <h2 class="pkg-version" data-toc-text="2.1" id="qtlmr-v21">QTLMR v2.1<a class="anchor" aria-label="anchor" href="#qtlmr-v21"></a></h2>
-<p>(更新日期: 2024-12-14)</p>
+<p>(更新日期: 2024-12-15)</p>
 <ul><li>1.增加LAVA函数功能：
 <ul><li>
-<code><a href="../reference/LAVA_sample_overlap.html">LAVA_sample_overlap()</a></code> 创建 LAVA 分析输入的sample overlap文件；</li>
+<code><a href="../reference/LAVA_sample_overlap.html">LAVA_sample_overlap()</a></code>创建 LAVA 分析输入的sample overlap文件；</li>
 <li>
-<code><a href="../reference/LAVA_run.html">LAVA_run()</a></code> 使用 LAVA 包对所有基因组位点执行双变量遗传相关性分析；</li>
+<code><a href="../reference/LAVA_run.html">LAVA_run()</a></code>使用 LAVA 包对所有基因组位点执行双变量遗传相关性分析；</li>
 <li>
-<code><a href="../reference/LAVA_bivarplot.html">LAVA_bivarplot()</a></code> 绘制双变量LAVA分析结果的散点图。</li>
+<code><a href="../reference/LAVA_bivarplot.html">LAVA_bivarplot()</a></code>绘制双变量LAVA分析结果的散点图。</li>
 </ul></li>
 <li>2.增加SUPERGNOVA函数功能：
 <ul><li>
@@ -258,7 +284,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by H YB.</p>
+  <p>Developed by YB H.</p>
 </div>
 
 <div class="pkgdown-footer-right">
