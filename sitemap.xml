@@ -37,6 +37,7 @@
 <url><loc>https://hortoner.github.io/QTLMR/reference/data_info_ukb_ppp_pQTL.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/data_Metabolites_1400.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/find_Confounders_ensembl.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/FM_summary.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/format_dat.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/format_data_Catalog.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/format_data_decode.html</loc></url>
@@ -46,6 +47,7 @@
 <url><loc>https://hortoner.github.io/QTLMR/reference/format_data_METAL.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/format_data_ukb_Neale.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/format_data_ukb_pQTL_cis.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/GCTA_fastBAT.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/Gene_start_end_info_ensembl.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/Gene_start_end_info_GTF.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/Gene_start_end_info_modified.html</loc></url>
@@ -55,6 +57,8 @@
 <url><loc>https://hortoner.github.io/QTLMR/reference/get_cispQTL_fenland_Online.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/get_Drugs_gene_IVs.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/get_EAF_local.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/GNOVA_py_install.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/GNOVA_run.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/GSMR2_QTLMR.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/GWAS_liftover.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/HDL_h2.html</loc></url>
@@ -76,6 +80,7 @@
 <url><loc>https://hortoner.github.io/QTLMR/reference/LAVA_bivarplot.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/LAVA_run.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/LAVA_sample_overlap.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/LCV_run.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/LDSC_ldscr_h2.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/LDSC_ldscr_rg.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/LDSC_MRlap.html</loc></url>
@@ -95,6 +100,7 @@
 <url><loc>https://hortoner.github.io/QTLMR/reference/MiXeR_Bivariate_visualize.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/MiXeR_format_dat.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/MiXeR_install.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/MiXeR_run.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/MiXeR_Univariate.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/MiXeR_Univariate_visualize.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/modified_harmonise_proxy_Ensembl.html</loc></url>
@@ -106,6 +112,8 @@
 <url><loc>https://hortoner.github.io/QTLMR/reference/MTAG_install.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/pipe.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/PLACO_analysis.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/PWCOCO_Coloc_dat.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/PWCOCO_run.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/remove_MHC_data.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/SMR_format_BESD.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/SMR_Locus_Effect_Plot.html</loc></url>

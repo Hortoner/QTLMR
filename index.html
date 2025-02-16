@@ -22,7 +22,7 @@
 
     <a class="navbar-brand me-2" href="index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.14</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.23</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,30 +50,30 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="qtlmr">QTLMR<a class="anchor" aria-label="anchor" href="#qtlmr"></a>
 </h1></div>
-<p><strong>                                   联系作者：Dr.H E-mail: <a href="mailto:2214047750@qq.com" class="email">2214047750@qq.com</a></strong> <br><br>         在现代生物医学研究中，理解基因与疾病之间的因果关系是发现新的治疗靶点的关键；通过Post GWAS与多组学孟德尔随机化分析，能更好探究疾病发病的病理生理机制。QTLMR是一个功能强大的R语言包，整合了MR、共定位、SMR、LDSC、HDL、Hess、LAVA、MiXeR、MTAG、METAL、CPASSOC、PLACO和TWAS分析等多种算法及多种可视化绘图功能。这些方法共同为快速识别疾病发病的诱因、治疗的潜在靶点提供了一体化的解决方案。 <br><br></p>
+<p><strong>                                   联系作者：Dr.H E-mail: <a href="mailto:2214047750@qq.com" class="email">2214047750@qq.com</a></strong> <br><br>         在现代生物医学研究中，理解基因与疾病之间的因果关系是发现新的治疗靶点的关键；通过 MR、coloc、PWcoco、SMR、FOCUS、MTAG、Hess、METAL、LDSC、HDL、SUPERGNOVA、GNOVA、CPASSOC、PLACO、MiXeR、cond/conjFDR、FM_summary、 GCTA_fastBAT、MAGMA、MR-JTI 和 TWAS 分析等多种算法及多种可视化绘图功能。这些方法共同为快速识别疾病发病的诱因、治疗的潜在靶点提供了一体化的解决方案。 <br><br></p>
 <div class="section level3">
 <h3 id="r语言集合软件包安装与更新">R语言集合软件包安装与更新:<a class="anchor" aria-label="anchor" href="#r%E8%AF%AD%E8%A8%80%E9%9B%86%E5%90%88%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%AE%89%E8%A3%85%E4%B8%8E%E6%9B%B4%E6%96%B0"></a>
 </h3>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">##安装remotes包。</span></span>
+<code class="sourceCode R"><span><span class="co">#安装remotes包。</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">##安装QTLMRget包。</span></span>
+<span><span class="co">#安装QTLMRget包。</span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"Hortoner/QTLMRget"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">##获取token，付费授权；一次授权永久免费更新。</span></span>
+<span><span class="co">#获取token，付费授权；一次授权永久免费更新。</span></span>
 <span><span class="fu">QTLMRget</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/QTLMRget/man/getToken.html" class="external-link">getToken</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">##在线安装；老用户无需重复授权，可直接更新QTLMR包。</span></span>
+<span><span class="co">#在线安装；老用户无需重复授权，可直接更新QTLMR包。</span></span>
 <span><span class="fu">QTLMRget</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/QTLMRget/man/install_QTLMR.html" class="external-link">install_QTLMR</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">##配置Rtools、OPENGWAS_JWT与GITHUB_TOKEN的token##</span></span>
+<span><span class="co">#配置Rtools、OPENGWAS_JWT与GITHUB_TOKEN的token##</span></span>
 <span><span class="fu">QTLMRget</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/QTLMRget/man/install_token.html" class="external-link">install_token</a></span><span class="op">(</span>OPENGWAS_JWT <span class="op">=</span> <span class="st">" "</span>, GITHUB_TOKEN <span class="op">=</span> <span class="st">" "</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">##安装QTLMR相关依赖包；可重复多次运行该函数，直到所有依赖包安装成功。</span></span>
+<span><span class="co">#安装QTLMR相关依赖包；可重复多次运行该函数，直到所有依赖包安装成功。</span></span>
 <span><span class="fu">QTLMRget</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/QTLMRget/man/install_QTLMR_dependence.html" class="external-link">install_QTLMR_dependence</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">##加载QTLMR程序包（首次加载需1-2分钟更新内置软件）。</span></span>
+<span><span class="co">#加载QTLMR程序包（首次加载需1-2分钟更新内置软件）。</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://hortoner.github.io/QTLMR">QTLMR</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">##查看QTLMR包使用帮助文档。</span></span>
@@ -114,7 +114,7 @@
 </ul>
 </li>
 </ul>
-<p><br>         QTLMR包为研究人员提供了一套完整且强大的工具，用于揭示基因与疾病之间的因果关系。通过整合MR、共定位、SMR、LDSC、HDL、Hess、LAVA、MiXeR、MTAG、METAL、CPASSOC、PLACO和TWAS分析等多种算法，QTLMR包帮助研究人员快速识别疾病的潜在治疗靶点。如果你致力于理解基因与疾病的关系并寻找新的治疗靶点或探索疾病发病机制，QTLMR包将是您的理想选择，祝君科研顺利！ <br></p>
+<p><br>         QTLMR包为研究人员提供了一套完整且强大的工具，用于揭示基因与疾病之间的因果关系。通过MR、coloc、PWcoco、SMR、FOCUS、MTAG、Hess、METAL、LDSC、HDL、SUPERGNOVA、GNOVA、CPASSOC、PLACO、MiXeR、cond/conjFDR、FM_summary、 GCTA_fastBAT、MAGMA、MR-JTI 和 TWAS 分析等多种算法，QTLMR包帮助研究人员快速识别疾病的潜在治疗靶点。如果你致力于理解基因与疾病的关系并寻找新的治疗靶点或探索疾病发病机制，QTLMR包将是您的理想选择，祝君科研顺利！ <br></p>
 <p><strong>        更多函数及功能将不断更新，敬请期待…</strong></p>
 </div>
 </div>
@@ -136,7 +136,7 @@
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>H YB <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/YOUR-ORCID-ID" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>YB H <br><small class="roles"> Author, maintainer </small>  </li>
 </ul>
 </div>
 
@@ -147,7 +147,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by H YB.</p>
+  <p>Developed by YB H.</p>
 </div>
 
 <div class="pkgdown-footer-right">
