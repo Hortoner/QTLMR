@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.23</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.25</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,7 +86,7 @@
 <li>链接：<a href="https://storage.googleapis.com/finngen-public-data-r10/summary_stats/finngen_R10_G6_MIGRAINE.gz" class="external-link uri">https://storage.googleapis.com/finngen-public-data-r10/summary_stats/finngen_R10_G6_MIGRAINE.gz</a>
 </li>
 </ul>
-<p><img src="images%2Fimg1%2F1.ifo.png" width="100%" style="display: block; margin: auto;"></p>
+<p><img src="images/img1/1.ifo.png" width="100%" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level4">
 <h4 id="进行utmost分析">
@@ -104,7 +104,7 @@
 <span>SMR_dat <span class="op">=</span> <span class="cn">TRUE</span>,  <span class="co"># 是否保存SMR格式数据</span></span>
 <span>METAL_dat <span class="op">=</span> <span class="cn">TRUE</span>  <span class="co"># 是否保存METAL格式数据</span></span>
 <span><span class="op">)</span></span></code></pre>
-<p><img src="images%2Fimg1%2F2.format_data.jpg" width="100%" style="display: block; margin: auto;"></p>
+<p><img src="images/img1/2.format_data.jpg" width="100%" style="display: block; margin: auto;"></p>
 <ul>
 <li>3.2 单组织分析：进行单个组织的TWAS-UTMOST分析</li>
 </ul>
@@ -124,7 +124,7 @@
 <span>  save_path <span class="op">=</span> <span class="st">"./2.UTMOST"</span>,  <span class="co"># 保存结果的路径</span></span>
 <span>  cores <span class="op">=</span> <span class="fl">14</span>  <span class="co"># 运行使用电脑线程数</span></span>
 <span><span class="op">)</span></span></code></pre>
-<p><img src="images%2Fimg1%2F3.utmost_res.png" width="100%" style="display: block; margin: auto;"></p>
+<p><img src="images/img1/3.utmost_res.png" width="100%" style="display: block; margin: auto;"></p>
 <ul>
 <li>3.3 跨组织联合分析：进行跨组织的TWAS-UTMOST分析</li>
 </ul>
@@ -138,7 +138,7 @@
 <span>  output_dir <span class="op">=</span> <span class="st">"./3.UTMOST_GBJ"</span>,  <span class="co"># 输出目录路径</span></span>
 <span>  output_name <span class="op">=</span> <span class="st">"Migraine"</span>  <span class="co"># 输出文件名</span></span>
 <span><span class="op">)</span></span></code></pre>
-<p><img src="images%2Fimg1%2F4.GBJ.jpg.jpg" width="100%" style="display: block; margin: auto;"></p>
+<p><img src="images/img1/4.GBJ.jpg.jpg" width="100%" style="display: block; margin: auto;"></p>
 <ul>
 <li>3.4 对UTMOST分析结果进行整理保存</li>
 </ul>
@@ -151,7 +151,7 @@
 <span></span>
 <span><span class="co"># 将UTMOST分析结果保存为CSV文件</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html" class="external-link">write.csv</a></span><span class="op">(</span><span class="va">dat_utmost_GBJ</span>, file <span class="op">=</span> <span class="st">"./3.UTMOST_GBJ/GBJ_res.csv"</span>, row.names <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre>
-<p><img src="images%2Fimg1%2F5.GBJ_RES.jpg" width="80%" style="display: block; margin: auto;"></p>
+<p><img src="images/img1/5.GBJ_RES.jpg" width="80%" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level4">
 <h4 id="进行fusion分析">
@@ -166,7 +166,7 @@
 <span>  save_name <span class="op">=</span> <span class="st">"Migraine"</span>,  <span class="co"># 保存的名称</span></span>
 <span>  save_path <span class="op">=</span> <span class="st">"./1.data"</span>  <span class="co"># 保存路径</span></span>
 <span><span class="op">)</span></span></code></pre>
-<p><img src="images%2Fimg1%2F6.sumstats.jpg" width="80%" style="display: block; margin: auto;"></p>
+<p><img src="images/img1/6.sumstats.jpg" width="80%" style="display: block; margin: auto;"></p>
 <ul>
 <li>4.2 单组织分析：进行单组织的FUSION分析</li>
 </ul>
@@ -190,7 +190,7 @@
 <span>  save_path <span class="op">=</span> <span class="st">"./4.FUSION"</span>,  <span class="co"># 保存路径</span></span>
 <span>  cores <span class="op">=</span> <span class="fl">10</span>  <span class="co"># 运行使用的电脑线程数</span></span>
 <span><span class="op">)</span></span></code></pre>
-<p><img src="images%2Fimg1%2F7.fusion_res.jpg" width="80%" style="display: block; margin: auto;"></p>
+<p><img src="images/img1/7.fusion_res.jpg" width="80%" style="display: block; margin: auto;"></p>
 <ul>
 <li>4.3 条件联合分析：进行条件联合分析</li>
 </ul>
@@ -209,7 +209,7 @@
 <span>  save_path <span class="op">=</span> <span class="st">"./5.conditonal"</span>,  <span class="co"># 保存路径</span></span>
 <span>  cores <span class="op">=</span> <span class="fl">8</span>  <span class="co"># 运行使用的电脑线程数</span></span>
 <span><span class="op">)</span></span></code></pre>
-<p><img src="images%2Fimg1%2F8.conditonal.png" width="80%" style="display: block; margin: auto;"></p>
+<p><img src="images/img1/8.conditonal.png" width="80%" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level4">
 <h4 id="进行magma分析">
@@ -254,7 +254,7 @@
 <span></span>
 <span><span class="co"># 筛选FDR值小于0.05的基因</span></span>
 <span><span class="va">MAGMA_genes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">MAGMA_genes</span>, <span class="va">MAGMA_genes</span><span class="op">$</span><span class="va">P.fdr</span> <span class="op">&lt;</span> <span class="fl">0.05</span><span class="op">)</span></span></code></pre>
-<p><img src="images%2Fimg1%2F9.utmost.jpg" width="80%" style="display: block; margin: auto;"></p>
+<p><img src="images/img1/9.utmost.jpg" width="80%" style="display: block; margin: auto;"></p>
 <ul>
 <li>5.4 图形可视化</li>
 </ul>
@@ -285,7 +285,7 @@
 <span>  height <span class="op">=</span> <span class="fl">7</span>,  <span class="co"># 图形高度</span></span>
 <span>  save_path <span class="op">=</span> <span class="st">"./6.MAGMA/"</span>  <span class="co"># 保存路径</span></span>
 <span><span class="op">)</span></span></code></pre>
-<p><img src="images%2Fimg1%2F10.gsa_plot.png" width="80%" style="display: block; margin: auto;"></p>
+<p><img src="images/img1/10.gsa_plot.png" width="80%" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level4">
 <h4 id="绘制韦恩图">
@@ -302,7 +302,7 @@
 <span>  height <span class="op">=</span> <span class="fl">7</span>,  <span class="co"># 图形高度</span></span>
 <span>  save_path <span class="op">=</span> <span class="st">"./7.venn"</span>  <span class="co"># 保存路径</span></span>
 <span><span class="op">)</span></span></code></pre>
-<p><img src="images%2Fimg1%2F11.venn.jpg" width="80%" style="display: block; margin: auto;"></p>
+<p><img src="images/img1/11.venn.jpg" width="80%" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level4">
 <h4 id="孟德尔随机化mr分析">
@@ -409,7 +409,7 @@
 <span></span>
 <span><span class="co"># 生成OR（比值比）结果</span></span>
 <span><span class="va">or</span> <span class="op">&lt;-</span> <span class="fu">TwoSampleMR</span><span class="fu">::</span><span class="fu"><a href="https://mrcieu.github.io/TwoSampleMR/reference/generate_odds_ratios.html" class="external-link">generate_odds_ratios</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span></span></code></pre>
-<p><img src="images%2Fimg1%2F12.MR.jpg" width="100%" style="display: block; margin: auto;"></p>
+<p><img src="images/img1/12.MR.jpg" width="100%" style="display: block; margin: auto;"></p>
 <ul>
 <li>7.7 绘制森林图</li>
 </ul>
@@ -427,7 +427,7 @@
 <span>  height <span class="op">=</span> <span class="fl">5</span>,  <span class="co"># 图形高度</span></span>
 <span>  save_path <span class="op">=</span> <span class="st">"./8.MR"</span>  <span class="co"># 保存路径</span></span>
 <span><span class="op">)</span></span></code></pre>
-<p><img src="images%2Fimg1%2F13.forest.png" width="100%" style="display: block; margin: auto;"></p>
+<p><img src="images/img1/13.forest.png" width="100%" style="display: block; margin: auto;"></p>
 </div>
 <div class="section level4">
 <h4 id="共定位分析">
@@ -509,7 +509,7 @@
 </ul>
 <pre><code><span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">coloc_summary</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html" class="external-link">write.csv</a></span><span class="op">(</span><span class="va">coloc_summary</span>, file <span class="op">=</span> <span class="st">"./9.coloc/coloc_res.csv"</span>, row.names <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre>
-<p><img src="images%2Fimg1%2F12.coloc.jpg" width="100%" style="display: block; margin: auto;"></p>
+<p><img src="images/img1/12.coloc.jpg" width="100%" style="display: block; margin: auto;"></p>
 <pre><code><span><span class="co"># 还可以联合SMR、FOCUS、TWAS其他算法、生信分析及湿实验等方法，丰富文章内容！</span></span>
 <span></span>
 <span><span class="co">## 感谢各位小伙伴使用...</span></span></code></pre>
@@ -526,7 +526,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer>

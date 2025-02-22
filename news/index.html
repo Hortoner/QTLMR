@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.23</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.25</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="2.2" id="qtlmr-v22">QTLMR v2.2<a class="anchor" aria-label="anchor" href="#qtlmr-v22"></a></h2>
-<p>(更新日期: 2025-2-16)</p>
+<p>(更新日期: 2025-2-22)</p>
 <ul><li>1.增加函数功能：
 <ul><li>
 <code>MiXeR_run</code>一键式进行MiXeR分析；</li>
@@ -50,14 +50,19 @@
 <li>
 <code><a href="../reference/PWCOCO_Coloc_dat.html">PWCOCO_Coloc_dat()</a></code>PWCOCO与Coloc分析基因组区域数据提取；</li>
 <li>
-<code><a href="../reference/PWCOCO_run.html">PWCOCO_run()</a></code>使用PWCOCO进行成对条件与共定位分析。</li>
+<code><a href="../reference/PWCOCO_run.html">PWCOCO_run()</a></code>使用PWCOCO进行成对条件与共定位分析；</li>
+<li>
+<code><a href="../reference/TWAS_FOCUS_Multi_test.html">TWAS_FOCUS_Multi_test()</a></code>循环多种组织FOCUS精细定位分析；</li>
+<li>
+<code><a href="../reference/HDL_L.html">HDL_L()</a></code>使用HDL方法进行局部遗传相关性分析。</li>
 </ul></li>
 <li>2.完善CPASSOC函数功能：
 <ul><li>
 <code><a href="../reference/CPASSOC_meta_gwas.html">CPASSOC_meta_gwas()</a></code> 根据PMID: 28980259文献，完善对SNP进行成对LD修剪，默认过滤Z-scores绝对值大于1.96的SNP。</li>
 </ul></li>
 <li>3.剔除FUSION函数绘制曼哈顿图参数。</li>
-<li>4.其它函数优化修复。</li>
+<li>4.修复FUCOS创建Python环境并更正<code><a href="../reference/TWAS_FOCUS_test.html">TWAS_FOCUS_test()</a></code>函数的ref_ld及locations参数。</li>
+<li>5.其它函数优化修复。</li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="2.1" id="qtlmr-v21">QTLMR v2.1<a class="anchor" aria-label="anchor" href="#qtlmr-v21"></a></h2>
@@ -288,7 +293,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer></div>
