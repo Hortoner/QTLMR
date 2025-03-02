@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.25</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.31</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -463,28 +463,34 @@
 
       <dl><dt>
 
-          <code><a href="coloc_GWAS.html">coloc_GWAS()</a></code>
+          <code><a href="coloc_format_dat.html">coloc_format_dat()</a></code>
 
         </dt>
-        <dd>GWAS共定位分析并绘制locuscomparer图</dd>
+        <dd>共定位基因组区域数据提取</dd>
       </dl><dl><dt>
 
-          <code><a href="coloc_stack_assoc_plot.html">coloc_stack_assoc_plot()</a></code>
+          <code><a href="coloc_abf.html">coloc_abf()</a></code>
 
         </dt>
-        <dd>绘制stack_assoc_plot图</dd>
+        <dd>coloc共定位分析并绘制locuscomparer图</dd>
       </dl><dl><dt>
 
-          <code><a href="PWCOCO_Coloc_dat.html">PWCOCO_Coloc_dat()</a></code>
+          <code><a href="coloc_susie.html">coloc_susie()</a></code>
 
         </dt>
-        <dd>PWCOCO与Coloc分析的基因组区域数据提取</dd>
+        <dd>SuSiE（单一效应之和）共定位分析</dd>
       </dl><dl><dt>
 
           <code><a href="PWCOCO_run.html">PWCOCO_run()</a></code>
 
         </dt>
         <dd>使用PWCOCO进行成对条件与共定位分析</dd>
+      </dl><dl><dt>
+
+          <code><a href="coloc_stack_assoc_plot.html">coloc_stack_assoc_plot()</a></code>
+
+        </dt>
+        <dd>绘制stack_assoc_plot图</dd>
       </dl></div><div class="section level2">
 
       <h3 id="-smr-">10.SMR分析<a class="anchor" aria-label="anchor" href="#-smr-"></a></h3>
@@ -779,7 +785,7 @@
         <dd>使用HESS软件绘制性状之间多基因性对比度的图</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-mixer-linux-">18.MiXeR分析（linux系统）<a class="anchor" aria-label="anchor" href="#-mixer-linux-"></a></h3>
+      <h3 id="-mixer-">18.MiXeR分析<a class="anchor" aria-label="anchor" href="#-mixer-"></a></h3>
 
 
 
@@ -985,7 +991,48 @@
         <dd>绘制MAGMA分析结果柱状图</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-gcta-">22.GCTA分析<a class="anchor" aria-label="anchor" href="#-gcta-"></a></h3>
+      <h3 id="-pops-">22.PoPS分析<a class="anchor" aria-label="anchor" href="#-pops-"></a></h3>
+
+
+
+    </div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="PoPS_py_install.html">PoPS_py_install()</a></code>
+
+        </dt>
+        <dd>配置PoPS软件环境</dd>
+      </dl><dl><dt>
+
+          <code><a href="PoPS_munge_feature.html">PoPS_munge_feature()</a></code>
+
+        </dt>
+        <dd>PoPS特征预处理函数</dd>
+      </dl><dl><dt>
+
+          <code><a href="PoPS_MAGMA.html">PoPS_MAGMA()</a></code>
+
+        </dt>
+        <dd>使用MAGMA软件生成MAGMA分数</dd>
+      </dl><dl><dt>
+
+          <code><a href="PoPS_py_run.html">PoPS_py_run()</a></code>
+
+        </dt>
+        <dd>使用PoPS进行基因优先评分分析</dd>
+      </dl><dl><dt>
+
+          <code><a href="PoPS_run.html">PoPS_run()</a></code>
+
+        </dt>
+        <dd>PoPS分析</dd>
+      </dl></div><div class="section level2">
+
+      <h3 id="-gcta-">23.GCTA分析<a class="anchor" aria-label="anchor" href="#-gcta-"></a></h3>
 
 
 
@@ -1002,7 +1049,7 @@
         <dd>基于GCTA_fastBAT的gene-based关联分析研究</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-gwas-meta-">23.GWAS meta及跨性状关联分析<a class="anchor" aria-label="anchor" href="#-gwas-meta-"></a></h3>
+      <h3 id="-gwas-meta-">24.GWAS-meta分析<a class="anchor" aria-label="anchor" href="#-gwas-meta-"></a></h3>
 
 
 
@@ -1049,7 +1096,7 @@
         <dd>使用PLACO进行复合零假设下的多效性分析</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-fm-summary-">24.FM_summary分析<a class="anchor" aria-label="anchor" href="#-fm-summary-"></a></h3>
+      <h3 id="-fm-summary-">25.FM_summary分析<a class="anchor" aria-label="anchor" href="#-fm-summary-"></a></h3>
 
 
 
@@ -1066,7 +1113,7 @@
         <dd>简化的贝叶斯精细映射方法（FM-summary）</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="--5">25.其它分析功能<a class="anchor" aria-label="anchor" href="#--5"></a></h3>
+      <h3 id="--5">26.其它分析功能<a class="anchor" aria-label="anchor" href="#--5"></a></h3>
 
 
 
@@ -1139,7 +1186,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer></div>

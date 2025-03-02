@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.25</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.31</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">PWCOCO_run</span><span class="op">(</span></span>
-<span>  bfile <span class="op">=</span> <span class="st">"./1.data/1000G/EUR"</span>,</span>
+<span>  bfile <span class="op">=</span> <span class="st">"G:/QTLMR_test/1kg.v3/EUR"</span>,</span>
 <span>  sum_stats1 <span class="op">=</span> <span class="st">"./data/atp1a4_test.exp.txt"</span>,</span>
 <span>  sum_stats2 <span class="op">=</span> <span class="st">"./data/atp1a4_test.out.txt"</span>,</span>
 <span>  p_cutoff1 <span class="op">=</span> <span class="fl">5e-08</span>,</span>
@@ -74,15 +74,15 @@
 
 
 <dl><dt id="arg-bfile">bfile<a class="anchor" aria-label="anchor" href="#arg-bfile"></a></dt>
-<dd><p>参考数据集文件路径，通常为Plink的bed/bim/fam格式文件。该文件的三个部分（bed、bim、fam）需要同名且位于同一目录下。</p></dd>
+<dd><p>基因型数据的plink文件前缀路径。勿使用MAF&gt;0.01版本，完整版下载地址：http://fileserve.mrcieu.ac.uk/ld/1kg.v3.tgz。</p></dd>
 
 
 <dt id="arg-sum-stats-">sum_stats1<a class="anchor" aria-label="anchor" href="#arg-sum-stats-"></a></dt>
-<dd><p>性状1 GWAS数据的文件路径，示例数据：https://github.com/jwr-git/pwcoco/tree/master/data，格式要求详见下面的details描述。</p></dd>
+<dd><p>性状1 GWAS数据的文件路径，格式要求详见下面的details描述。若仅对单一区域分析，可使用'coloc_format_dat()'提取数据。</p></dd>
 
 
 <dt id="arg-sum-stats-">sum_stats2<a class="anchor" aria-label="anchor" href="#arg-sum-stats-"></a></dt>
-<dd><p>性状2 GWAS数据的文件路径，示例数据：https://github.com/jwr-git/pwcoco/tree/master/data，格式要求详见下面的details描述。</p></dd>
+<dd><p>性状2 GWAS数据的文件路径，格式要求详见下面的details描述。若仅对单一区域分析，可使用'coloc_format_dat()'提取数据。</p></dd>
 
 
 <dt id="arg-p-cutoff-">p_cutoff1<a class="anchor" aria-label="anchor" href="#arg-p-cutoff-"></a></dt>
@@ -203,7 +203,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer></div>
