@@ -11,8 +11,10 @@
 <url><loc>https://hortoner.github.io/QTLMR/reference/calculation_Fvalue_R2.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/clump_data_local_Online.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/clump_LD_R2.html</loc></url>
-<url><loc>https://hortoner.github.io/QTLMR/reference/coloc_GWAS.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/coloc_abf.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/coloc_format_dat.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/coloc_stack_assoc_plot.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/coloc_susie.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/cond_conjFDR.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/CPASSOC_meta_gwas.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/data_cispQTL_ukb_ppp_exp.html</loc></url>
@@ -113,7 +115,11 @@
 <url><loc>https://hortoner.github.io/QTLMR/reference/MTAG_install.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/pipe.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/PLACO_analysis.html</loc></url>
-<url><loc>https://hortoner.github.io/QTLMR/reference/PWCOCO_Coloc_dat.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/PoPS_MAGMA.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/PoPS_munge_feature.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/PoPS_py_install.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/PoPS_py_run.html</loc></url>
+<url><loc>https://hortoner.github.io/QTLMR/reference/PoPS_run.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/PWCOCO_run.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/remove_MHC_data.html</loc></url>
 <url><loc>https://hortoner.github.io/QTLMR/reference/SMR_format_BESD.html</loc></url>

@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.25</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.31</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,11 +34,35 @@
     </div>
 
     <div class="section level2">
+<h2 class="pkg-version" data-toc-text="2.3" id="qtlmr-v23">QTLMR v2.3<a class="anchor" aria-label="anchor" href="#qtlmr-v23"></a></h2>
+<p>(更新日期: 2025-3-1)</p>
+<ul><li>1.增加<code>PoPS</code>函数功能：
+<ul><li>
+<code><a href="../reference/PoPS_py_install.html">PoPS_py_install()</a></code>配置PoPS软件环境；</li>
+<li>
+<code><a href="../reference/PoPS_munge_feature.html">PoPS_munge_feature()</a></code>PoPS特征预处理函数；</li>
+<li>
+<code><a href="../reference/PoPS_MAGMA.html">PoPS_MAGMA()</a></code>使用MAGMA软件生成MAGMA分数；</li>
+<li>
+<code><a href="../reference/PoPS_py_run.html">PoPS_py_run()</a></code>使用PoPS进行基因优先评分分析；</li>
+<li>
+<code><a href="../reference/PoPS_run.html">PoPS_run()</a></code>PoPS分析。</li>
+</ul></li>
+<li>2增加完善<code>共定位</code>函数功能：
+<ul><li>
+<code><a href="../reference/coloc_format_dat.html">coloc_format_dat()</a></code>共定位基因组区域数据提取；</li>
+<li>废除<code>coloc_GWAS()</code>函数，重新完善为<code><a href="../reference/coloc_abf.html">coloc_abf()</a></code>函数；</li>
+<li>
+<code><a href="../reference/coloc_susie.html">coloc_susie()</a></code>SuSiE（单一效应之和）共定位分析。</li>
+</ul></li>
+<li>3.其它函数优化修复。</li>
+</ul></div>
+    <div class="section level2">
 <h2 class="pkg-version" data-toc-text="2.2" id="qtlmr-v22">QTLMR v2.2<a class="anchor" aria-label="anchor" href="#qtlmr-v22"></a></h2>
 <p>(更新日期: 2025-2-22)</p>
 <ul><li>1.增加函数功能：
 <ul><li>
-<code>MiXeR_run</code>一键式进行MiXeR分析；</li>
+<code><a href="../reference/MiXeR_run.html">MiXeR_run()</a></code>一键式进行MiXeR分析；</li>
 <li>
 <code><a href="../reference/FM_summary.html">FM_summary()</a></code>简化的贝叶斯精细映射方法（FM-summary）；</li>
 <li>
@@ -47,8 +71,6 @@
 <code><a href="../reference/GNOVA_run.html">GNOVA_run()</a></code>使用GNOVA进行遗传协方差分析；</li>
 <li>
 <code><a href="../reference/LCV_run.html">LCV_run()</a></code>进行潜在因果变量分析；</li>
-<li>
-<code><a href="../reference/PWCOCO_Coloc_dat.html">PWCOCO_Coloc_dat()</a></code>PWCOCO与Coloc分析基因组区域数据提取；</li>
 <li>
 <code><a href="../reference/PWCOCO_run.html">PWCOCO_run()</a></code>使用PWCOCO进行成对条件与共定位分析；</li>
 <li>
@@ -210,7 +232,7 @@
 <li>
 <code><a href="../reference/Gene_start_end_info_modified.html">Gene_start_end_info_modified()</a></code>从内置数据中直接获取不同版本Ensembl id与Gene汇总信息数据；</li>
 <li>
-<code><a href="../reference/coloc_GWAS.html">coloc_GWAS()</a></code>对共定位函数进行优化，可自由选择是否locuscomparer作图，返回结果进行优化处理，方便直接保存使用；</li>
+<code>coloc_GWAS()</code>对共定位函数进行优化，可自由选择是否locuscomparer作图，返回结果进行优化处理，方便直接保存使用；</li>
 <li>
 <code><a href="../reference/coloc_stack_assoc_plot.html">coloc_stack_assoc_plot()</a></code>优化绘图时，可选择性只显示最显著的topSNP；</li>
 <li>
@@ -242,7 +264,7 @@
 <code><a href="../reference/format_dat.html">format_dat()</a></code>函数可将读入至R环境变量中的数据转换成标准TwosampleMR、SMR、METAL文件。</li>
 <li>1.4 增加”提取原始本地xQTL数据的顺式区域数据”功能：</li>
 <li>
-<code><a href="../reference/xQTL_cis_dat.html">xQTL_cis_dat()</a></code>函数可将原始的xQTL数据，根据基因编码的起始与终止位置的上下游区域范围内的SNP提取出来，以便进一步使用<code><a href="../reference/coloc_GWAS.html">coloc_GWAS()</a></code>进行后续的共定位分析，或使用<code><a href="../reference/SMR_format_BESD.html">SMR_format_BESD()</a></code>函数转换成SMR分析所需的BESD二进制数据文件进行SMR分析，完善非R包内置xQTL数据的清洗与转换功能。</li>
+<code><a href="../reference/xQTL_cis_dat.html">xQTL_cis_dat()</a></code>函数可将原始的xQTL数据，根据基因编码的起始与终止位置的上下游区域范围内的SNP提取出来，以便进一步使用<code>coloc_GWAS()</code>进行后续的共定位分析，或使用<code><a href="../reference/SMR_format_BESD.html">SMR_format_BESD()</a></code>函数转换成SMR分析所需的BESD二进制数据文件进行SMR分析，完善非R包内置xQTL数据的清洗与转换功能。</li>
 <li>1.5 增加”韦恩图绘制”功能：</li>
 <li>
 <code><a href="../reference/venn_plot.html">venn_plot()</a></code>函数绘制韦恩图，示例数据（详细请见 “./QTLMR test/版本升级文件/1.4版本” venn文件夹）。</li>
@@ -293,7 +315,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer></div>
