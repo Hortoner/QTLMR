@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.31</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.32</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,12 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">HESS_estimate_phenocor</span><span class="op">(</span>ldsc_log <span class="op">=</span> <span class="st">" "</span>, <span class="va">samplesize1</span>, <span class="va">samplesize2</span>, ns <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">HESS_estimate_phenocor</span><span class="op">(</span></span>
+<span>  ldsc_log <span class="op">=</span> <span class="st">"./rg.log"</span>,</span>
+<span>  samplesize1 <span class="op">=</span> <span class="fl">1000</span>,</span>
+<span>  samplesize2 <span class="op">=</span> <span class="fl">3000</span>,</span>
+<span>  ns <span class="op">=</span> <span class="fl">50</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -52,23 +57,15 @@
 
 
 <dt id="arg-samplesize-">samplesize1<a class="anchor" aria-label="anchor" href="#arg-samplesize-"></a></dt>
-<dd><p>数值，性状1的样本量。</p></dd>
+<dd><p>必填，数值，性状1的样本量。</p></dd>
 
 
 <dt id="arg-samplesize-">samplesize2<a class="anchor" aria-label="anchor" href="#arg-samplesize-"></a></dt>
-<dd><p>数值，性状2的样本量。</p></dd>
+<dd><p>必填，性状2的样本量。</p></dd>
 
 
 <dt id="arg-ns">ns<a class="anchor" aria-label="anchor" href="#arg-ns"></a></dt>
-<dd><p>数值，两性状GWAS的重叠的样本量。</p></dd>
-
-
-<dt id="arg-save-name">save_name<a class="anchor" aria-label="anchor" href="#arg-save-name"></a></dt>
-<dd><p>保存文件的文件名称。</p></dd>
-
-
-<dt id="arg-save-path">save_path<a class="anchor" aria-label="anchor" href="#arg-save-path"></a></dt>
-<dd><p>文件保存路径。</p></dd>
+<dd><p>必填，填非0数值，两性状GWAS的重叠的样本量。</p></dd>
 
 </dl></div>
     <div class="section level2">

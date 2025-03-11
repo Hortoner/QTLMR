@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.31</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.32</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -746,7 +746,7 @@
           <code><a href="HESS_estimate_heritability.html">HESS_estimate_heritability()</a></code>
 
         </dt>
-        <dd>使用HESS软件计算局部SNP遗传力及标准误差</dd>
+        <dd>使用HESS软件计算单一性状局部SNP遗传力及标准误差</dd>
       </dl><dl><dt>
 
           <code><a href="HESS_estimate_correlation.html">HESS_estimate_correlation()</a></code>
@@ -785,7 +785,7 @@
         <dd>使用HESS软件绘制性状之间多基因性对比度的图</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-mixer-">18.MiXeR分析<a class="anchor" aria-label="anchor" href="#-mixer-"></a></h3>
+      <h3 id="-mixer-linux-">18.MiXeR分析(Linux系统)<a class="anchor" aria-label="anchor" href="#-mixer-linux-"></a></h3>
 
 
 
@@ -838,7 +838,7 @@
         <dd>MiXeR分析</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-twas-">19.TWAS分析<a class="anchor" aria-label="anchor" href="#-twas-"></a></h3>
+      <h3 id="-fusion-">19.FUSION分析<a class="anchor" aria-label="anchor" href="#-fusion-"></a></h3>
 
 
 
@@ -871,7 +871,18 @@
 
         </dt>
         <dd>使用FUSION软件进行Joint/conditional分析</dd>
-      </dl><dl><dt>
+      </dl></div><div class="section level2">
+
+      <h3 id="-utmost-">20.UTMOST分析<a class="anchor" aria-label="anchor" href="#-utmost-"></a></h3>
+
+
+
+    </div><div class="section level2">
+
+
+
+
+      <dl><dt>
 
           <code><a href="TWAS_UTMOST_install.html">TWAS_UTMOST_install()</a></code>
 
@@ -889,39 +900,9 @@
 
         </dt>
         <dd>使用UTMOST软件进行跨组织联合TWAS分析</dd>
-      </dl><dl><dt>
-
-          <code><a href="TWAS_FOCUS_install.html">TWAS_FOCUS_install()</a></code>
-
-        </dt>
-        <dd>配置FOCUS软件环境</dd>
-      </dl><dl><dt>
-
-          <code><a href="TWAS_FOCUS_import.html">TWAS_FOCUS_import()</a></code>
-
-        </dt>
-        <dd>使用FOCUS软件创建权重数据</dd>
-      </dl><dl><dt>
-
-          <code><a href="TWAS_FOCUS_format_data.html">TWAS_FOCUS_format_data()</a></code>
-
-        </dt>
-        <dd>将TwosampleMR格式转换成TWAS FOCUS分析输入格式数据</dd>
-      </dl><dl><dt>
-
-          <code><a href="TWAS_FOCUS_test.html">TWAS_FOCUS_test()</a></code>
-
-        </dt>
-        <dd>使用FOCUS软件进行TWAS的基因-性状关联信号精细定位分析</dd>
-      </dl><dl><dt>
-
-          <code><a href="TWAS_FOCUS_Multi_test.html">TWAS_FOCUS_Multi_test()</a></code>
-
-        </dt>
-        <dd>使用FOCUS软件进行循环多种组织TWAS的基因-性状关联信号精细定位分析</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-mr-jti-">20.MR-JTI分析<a class="anchor" aria-label="anchor" href="#-mr-jti-"></a></h3>
+      <h3 id="-mr-jti-">21.MR-JTI分析<a class="anchor" aria-label="anchor" href="#-mr-jti-"></a></h3>
 
 
 
@@ -956,7 +937,83 @@
         <dd>计算MR_JTI结果的beta值及95% CI</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-magma-">21.MAGMA分析<a class="anchor" aria-label="anchor" href="#-magma-"></a></h3>
+      <h3 id="-smultixcan-">22.SMulTiXcan分析<a class="anchor" aria-label="anchor" href="#-smultixcan-"></a></h3>
+
+
+
+    </div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="MetaXcan_Harmonization.html">MetaXcan_Harmonization()</a></code>
+
+        </dt>
+        <dd>对 GWAS 基因组版本转换以适配 MetaXcan 分析</dd>
+      </dl><dl><dt>
+
+          <code><a href="MetaXcan_imputation.html">MetaXcan_imputation()</a></code>
+
+        </dt>
+        <dd>对 GWAS 结果的基因型插补（Imputation）以适配 MetaXcan 分析</dd>
+      </dl><dl><dt>
+
+          <code><a href="SPrediXcan.html">SPrediXcan()</a></code>
+
+        </dt>
+        <dd>使用GTEX v8 MAHR 预测模型进行S-PrediXcan分析</dd>
+      </dl><dl><dt>
+
+          <code><a href="SMulTiXcan.html">SMulTiXcan()</a></code>
+
+        </dt>
+        <dd>使用SMulTiXcan进行跨组织TWAS分析</dd>
+      </dl></div><div class="section level2">
+
+      <h3 id="-focus-">23.FOCUS分析<a class="anchor" aria-label="anchor" href="#-focus-"></a></h3>
+
+
+
+    </div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="TWAS_FOCUS_install.html">TWAS_FOCUS_install()</a></code>
+
+        </dt>
+        <dd>配置FOCUS软件环境</dd>
+      </dl><dl><dt>
+
+          <code><a href="TWAS_FOCUS_import.html">TWAS_FOCUS_import()</a></code>
+
+        </dt>
+        <dd>使用FOCUS软件创建权重数据</dd>
+      </dl><dl><dt>
+
+          <code><a href="TWAS_FOCUS_format_data.html">TWAS_FOCUS_format_data()</a></code>
+
+        </dt>
+        <dd>将TwosampleMR格式转换成TWAS FOCUS分析输入格式数据</dd>
+      </dl><dl><dt>
+
+          <code><a href="TWAS_FOCUS_test.html">TWAS_FOCUS_test()</a></code>
+
+        </dt>
+        <dd>使用FOCUS软件进行TWAS的基因-性状关联信号精细定位分析</dd>
+      </dl><dl><dt>
+
+          <code><a href="TWAS_FOCUS_Multi_test.html">TWAS_FOCUS_Multi_test()</a></code>
+
+        </dt>
+        <dd>使用FOCUS软件进行循环多种组织TWAS的基因-性状关联信号精细定位分析</dd>
+      </dl></div><div class="section level2">
+
+      <h3 id="-magma-">24.MAGMA分析<a class="anchor" aria-label="anchor" href="#-magma-"></a></h3>
 
 
 
@@ -991,7 +1048,7 @@
         <dd>绘制MAGMA分析结果柱状图</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-pops-">22.PoPS分析<a class="anchor" aria-label="anchor" href="#-pops-"></a></h3>
+      <h3 id="-pops-">25.PoPS分析<a class="anchor" aria-label="anchor" href="#-pops-"></a></h3>
 
 
 
@@ -1032,7 +1089,7 @@
         <dd>PoPS分析</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-gcta-">23.GCTA分析<a class="anchor" aria-label="anchor" href="#-gcta-"></a></h3>
+      <h3 id="-gcta-">26.GCTA分析<a class="anchor" aria-label="anchor" href="#-gcta-"></a></h3>
 
 
 
@@ -1049,7 +1106,7 @@
         <dd>基于GCTA_fastBAT的gene-based关联分析研究</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-gwas-meta-">24.GWAS-meta分析<a class="anchor" aria-label="anchor" href="#-gwas-meta-"></a></h3>
+      <h3 id="-gwas-meta-">27.GWAS-meta分析<a class="anchor" aria-label="anchor" href="#-gwas-meta-"></a></h3>
 
 
 
@@ -1096,7 +1153,7 @@
         <dd>使用PLACO进行复合零假设下的多效性分析</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-fm-summary-">25.FM_summary分析<a class="anchor" aria-label="anchor" href="#-fm-summary-"></a></h3>
+      <h3 id="-fm-summary-">28.FM_summary分析<a class="anchor" aria-label="anchor" href="#-fm-summary-"></a></h3>
 
 
 
@@ -1110,10 +1167,10 @@
           <code><a href="FM_summary.html">FM_summary()</a></code>
 
         </dt>
-        <dd>简化的贝叶斯精细映射方法（FM-summary）</dd>
+        <dd>简化的贝叶斯精细定位方法（FM-summary）</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="--5">26.其它分析功能<a class="anchor" aria-label="anchor" href="#--5"></a></h3>
+      <h3 id="--5">29.其它分析功能<a class="anchor" aria-label="anchor" href="#--5"></a></h3>
 
 
 
