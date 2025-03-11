@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.31</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.32</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="2.3" id="qtlmr-v23">QTLMR v2.3<a class="anchor" aria-label="anchor" href="#qtlmr-v23"></a></h2>
-<p>(更新日期: 2025-3-1)</p>
+<p>(更新日期: 2025-3-11)</p>
 <ul><li>1.增加<code>PoPS</code>函数功能：
 <ul><li>
 <code><a href="../reference/PoPS_py_install.html">PoPS_py_install()</a></code>配置PoPS软件环境；</li>
@@ -48,14 +48,24 @@
 <li>
 <code><a href="../reference/PoPS_run.html">PoPS_run()</a></code>PoPS分析。</li>
 </ul></li>
-<li>2增加完善<code>共定位</code>函数功能：
+<li>2.增加完善<code>共定位</code>函数功能：
 <ul><li>
 <code><a href="../reference/coloc_format_dat.html">coloc_format_dat()</a></code>共定位基因组区域数据提取；</li>
 <li>废除<code>coloc_GWAS()</code>函数，重新完善为<code><a href="../reference/coloc_abf.html">coloc_abf()</a></code>函数；</li>
 <li>
 <code><a href="../reference/coloc_susie.html">coloc_susie()</a></code>SuSiE（单一效应之和）共定位分析。</li>
 </ul></li>
-<li>3.其它函数优化修复。</li>
+<li>3.增加完善<code>SMulTiXcan</code>函数功能：
+<ul><li>
+<code><a href="../reference/MetaXcan_Harmonization.html">MetaXcan_Harmonization()</a></code>对GWAS基因组版本转换以适配MetaXcan分析；</li>
+<li>
+<code><a href="../reference/MetaXcan_imputation.html">MetaXcan_imputation()</a></code>对GWAS结果的基因型插补以适配MetaXcan分析；</li>
+<li>
+<code><a href="../reference/SPrediXcan.html">SPrediXcan()</a></code>使用GTEX v8 MAHR 预测模型进行S-PrediXcan分析；</li>
+<li>
+<code><a href="../reference/SMulTiXcan.html">SMulTiXcan()</a></code>使用SMulTiXcan进行跨组织TWAS分析。</li>
+</ul></li>
+<li>4.其它函数优化修复。</li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="2.2" id="qtlmr-v22">QTLMR v2.2<a class="anchor" aria-label="anchor" href="#qtlmr-v22"></a></h2>
