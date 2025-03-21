@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.34</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +66,7 @@
 
 
 <dt id="arg-sumstatsfile">Sumstatsfile<a class="anchor" aria-label="anchor" href="#arg-sumstatsfile"></a></dt>
-<dd><p>.sumstats.gz格式文件路径。</p></dd>
+<dd><p>.sumstats.gz格式文件路径。使用TWAS_fusion_format_data()函数转换获得。</p></dd>
 
 
 <dt id="arg-inputfile">inputfile<a class="anchor" aria-label="anchor" href="#arg-inputfile"></a></dt>
@@ -115,8 +115,13 @@
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>分析结果。</p>
-    </div>
+    <p>返回包含分析结果的多个输出文件。</p>
+<p>该过程将读取所选基因的 <strong>表达加权数据</strong>，并将其整合到 <strong>重叠基因组区域（loci）</strong> 中（基于 <code>--locus_win</code> 定义的边界）。随后，程序会生成多个条件输出，并绘制以下 <strong>总结图</strong>：</p><ul><li><p><strong>上面面板</strong>：显示了该基因区域内的所有基因。所有与 <strong>TWAS</strong> 关联的基因（包括 marginally 关联）以蓝色标记，与 <strong>X基因</strong> 等共同显著的基因以绿色标出。</p><ul><li><p>程序会输出名为 <code>*.joint_included.dat</code> 的文件，包含这些共同显著基因的 <strong>联合效应估计和 P 值</strong>。</p></li>
+<li><p>对于那些因条件非显著而被移除的基因，相关数据会输出到对应的 <code>*.joint_dropped.dat</code> 文件中，包含 <strong>条件效应估计和 P 值</strong>。</p></li>
+</ul></li>
+<li><p><strong>下面面板</strong>：显示了在对 <strong>X基因</strong> 的基因表达进行条件分析前后的 <strong>GWAS 曼哈顿图</strong>：</p><ul><li><p>条件前的 GWAS 数据以灰色表示，条件后的数据（考虑了 <strong>X基因</strong> 的基因表达）则以蓝色表示。您可以看到该区域的信号在进行条件分析后从 <strong>全基因组显著</strong> 变为 <strong>非显著</strong>，表明 <strong>X基因</strong> 的基因表达可能是驱动该GWAS信号的关键因素。</p></li>
+</ul></li>
+</ul></div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>

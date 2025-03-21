@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.34</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +71,7 @@
 
 
 <dt id="arg-sumstatsfile">Sumstatsfile<a class="anchor" aria-label="anchor" href="#arg-sumstatsfile"></a></dt>
-<dd><p>.sumstats.gz格式文件路径。</p></dd>
+<dd><p>.sumstats.gz格式文件路径。使用TWAS_fusion_format_data()函数转换获得。</p></dd>
 
 
 <dt id="arg-weights">weights<a class="anchor" aria-label="anchor" href="#arg-weights"></a></dt>
@@ -140,12 +140,25 @@
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>分析结果。</p>
-    </div>
-    <div class="section level2">
-    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>目的是通过结合基因组关联研究（GWAS）的汇总统计数据和基因表达数据，来预测和测试基因表达与特定疾病或表型之间的相关性。</p>
-    </div>
+    <p>生成一个 CSV 结果文件，每行代表一个基因在特定表型下的 TWAS（Transcriptome-Wide Association Study）分析结果，包含以下字段：</p><ul><li><p>FILE: 使用的参考权重文件的完整路径。</p></li>
+<li><p>ID: 基因或功能元件的标识符，来源于 –weights 文件（例如 FAM109B）。</p></li>
+<li><p>CHR: 所在染色体编号。</p></li>
+<li><p>P0: 基因起始位置（基于 –weights 文件）。</p></li>
+<li><p>P1: 基因终止位置（基于 –weights 文件）。</p></li>
+<li><p>HSQ: 该基因的遗传力（heritability）。</p></li>
+<li><p>BEST.GWAS.ID: 在该基因座内最显著 GWAS SNP 的 rsID。</p></li>
+<li><p>BEST.GWAS.Z: 该 GWAS SNP 的 Z-score，反映其与表型的关联强度。</p></li>
+<li><p>EQTL.ID: 该基因座内最显著 eQTL（表达数量性状位点）的 rsID。</p></li>
+<li><p>EQTL.R2: 该 eQTL 的交叉验证 R²，表示其预测能力。</p></li>
+<li><p>EQTL.Z: 该 eQTL 的 Z-score，衡量基因表达与基因型的关联强度。</p></li>
+<li><p>EQTL.GWAS.Z: 该 eQTL 在 GWAS 中的 Z-score，反映其在表型中的作用。</p></li>
+<li><p>NSNP: 该基因座内的 SNP 数量。</p></li>
+<li><p>MODEL: 最优模型（例如 Lasso）。</p></li>
+<li><p>MODELCV.R2: 该模型的交叉验证 R²，评估其预测性能。</p></li>
+<li><p>MODELCV.PV: 该模型的交叉验证 P 值，评估其预测显著性。</p></li>
+<li><p>TWAS.Z: 主要分析统计量，即 TWAS Z-score，表示该基因表达对表型的预测关联强度。</p></li>
+<li><p>TWAS.P: 主要分析统计量，即 TWAS P 值，评估该基因表达与表型的统计学显著性。</p></li>
+</ul></div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>

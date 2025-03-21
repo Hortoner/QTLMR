@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.34</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,13 +95,30 @@
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>返回结果。注意：某些表型的某些基因组区域的真实遗传力可能非常小。尽管存在估计局部遗传力的方法，但它们可能会提供不稳定的结果，在许多情况下会给出负的遗传力估计。SUPERGNOVA 会忽略负的遗传力估计，将相关性估计置为 "NA"。因此，我们建议用户在进行局部遗传相关性分析时，更多关注遗传协方差而非遗传相关性。</p>
-    </div>
+    <p>分析结果，包含以下列：</p><ul><li><p>chr: 染色体编号。</p></li>
+<li><p>start: 该基因组区域的起始位置（来源于输入的基因组分区文件）。</p></li>
+<li><p>end: 该基因组区域的终止位置（来源于输入的基因组分区文件）。</p></li>
+<li><p>rho: 估计的局部遗传协方差（local genetic covariance）。</p></li>
+<li><p>corr: 估计的局部遗传相关性（local genetic correlation）。</p></li>
+<li><p>h2_1: 采用矩估计法（method of moments）计算的第一个性状的局部遗传力估计值（local heritability）。</p></li>
+<li><p>h2_2: 采用矩估计法计算的第二个性状的局部遗传力估计值。</p></li>
+<li><p>var: 局部遗传协方差估计值的方差。</p></li>
+<li><p>p: 局部遗传协方差的 p 值。</p></li>
+<li><p>m: 用于计算该基因组区域局部遗传协方差的 SNP 数目。</p></li>
+</ul><p><strong>注意</strong>：某些表型的某些基因组区域的真实遗传力可能非常小。尽管已有方法可用于估计局部遗传力，但在许多情况下，这些方法可能会提供不稳定的估计，甚至得到负的遗传力估计值。
+<strong>SUPERGNOVA 采用如下策略处理负的遗传力估计值</strong>：</p><ul><li><p>直接忽略负的遗传力估计值，将相关性估计结果设为 "NA"。</p></li>
+<li><p>因此，我们建议在局部遗传相关性分析中，<strong>优先关注遗传协方差 rho，而非遗传相关性 corr</strong>。</p></li>
+</ul></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>bfile 参数表示 .bed/.bim/.fam 基因型数据文件的前缀。注意 <code>@</code>，它表示一个通配符字符，SUPERGNOVA 将会用 1-22 替代它。或者，如果您有一个包含所有22个染色体的基因型数据文件集，您可以只指定一个 bfile，例如1号染色体<code>eur_chr1_SNPmaf5</code>。我们建议您使用全基因组数据作为参考面板，尽管您可能只对某个特定区域的局部遗传相关性感兴趣。
-partition 参数表示基因组分区文件，格式为 bed 文件。注意 <code>@</code>，它表示一个通配符字符，SUPERGNOVA 将会用 1-22 替代它。或者，如果您只对某些特定的基因组区域感兴趣，您可以指定一个总结所有感兴趣区域的 bed 文件，例如1号染色<code>eur_chr1.bed</code>。</p>
-    </div>
+    <p>该分析基于 <strong>SUPERGNOVA</strong> 方法，利用 GWAS 数据计算局部遗传相关性和协方差，以探讨两个性状在基因组特定区域上的遗传关联性。</p>
+<p><strong>输入数据</strong>：</p><ul><li><p><code>bfile</code>: 指定 <code>.bed/.bim/.fam</code> 格式的基因型数据文件前缀。</p><ul><li><p><code>@</code> 代表通配符字符，SUPERGNOVA 会自动替换为 <code>1-22</code> 以涵盖所有常染色体。</p></li>
+<li><p>例如，若有全基因组基因型数据，可指定 <code>bfile = "eur_chr@_SNPmaf5"</code>。</p></li>
+</ul></li>
+<li><p><code>partition</code>: 指定基因组分区文件（<code>.bed</code> 格式），用于定义分析区域。</p><ul><li><p><code>@</code> 代表通配符，SUPERGNOVA 会自动替换 <code>1-22</code>。</p></li>
+<li><p>若仅对特定区域感兴趣，可指定一个包含所有目标区域的 <code>.bed</code> 文件，例如 <code>eur_chr1.bed</code>。</p></li>
+</ul></li>
+</ul></div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>

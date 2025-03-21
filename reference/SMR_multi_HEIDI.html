@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.34</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -155,8 +155,32 @@
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>data 分析结果数据。</p>
-    </div>
+    <p>返回一个 <strong>数据框（data frame）</strong>，包含 <strong>SMR（Summary-based Mendelian Randomization）</strong> 和 <strong>HEIDI（Heterogeneity in Dependent Instruments）</strong> 分析结果。
+主要包括以下列：</p><ul><li><p><strong>probe_ID</strong>: 探针 ID（对应目标基因）。</p></li>
+<li><p><strong>probe_chr</strong>: 探针所在的染色体编号。</p></li>
+<li><p><strong>gene_name</strong>: 目标基因名称。</p></li>
+<li><p><strong>probe_position</strong>: 探针的基因组位置（bp）。</p></li>
+<li><p><strong>trans_eQTL_chr</strong>: 跨染色体 eQTL 的染色体编号（仅适用于 <strong>trans-eQTL</strong> 分析）。</p></li>
+<li><p><strong>trans_region_start</strong>: <strong>trans-eQTL</strong> 区域的起始位置（bp）。</p></li>
+<li><p><strong>trans_region_end</strong>: <strong>trans-eQTL</strong> 区域的终止位置（bp）。</p></li>
+<li><p><strong>SNP_name</strong>: 关联 SNP（rsID）。</p></li>
+<li><p><strong>SNP_chr</strong>: SNP 所在染色体编号。</p></li>
+<li><p><strong>SNP_position</strong>: SNP 在基因组上的位置（bp）。</p></li>
+<li><p><strong>effect_allele</strong>: 作用等位基因（Coded Allele）。</p></li>
+<li><p><strong>other_allele</strong>: 另一等位基因（Reference Allele）。</p></li>
+<li><p><strong>effect_allele_freq</strong>: 作用等位基因的频率（基于参考样本估计）。</p></li>
+<li><p><strong>GWAS_beta</strong>: GWAS 研究中该 SNP 的效应大小（Beta）。</p></li>
+<li><p><strong>GWAS_SE</strong>: GWAS 研究中 Beta 的标准误（Standard Error）。</p></li>
+<li><p><strong>GWAS_p</strong>: GWAS 研究中该 SNP 的 P 值。</p></li>
+<li><p><strong>eQTL_beta</strong>: eQTL 研究中该 SNP 的效应大小（Beta）。</p></li>
+<li><p><strong>eQTL_SE</strong>: eQTL 研究中 Beta 的标准误。</p></li>
+<li><p><strong>eQTL_p</strong>: eQTL 研究中该 SNP 的 P 值。</p></li>
+<li><p><strong>SMR_beta</strong>: <strong>SMR 分析</strong> 计算得到的因果效应大小（Beta）。</p></li>
+<li><p><strong>SMR_SE</strong>: <strong>SMR 分析</strong> 计算得到的 Beta 标准误。</p></li>
+<li><p><strong>SMR_p</strong>: <strong>SMR 分析</strong> 计算得到的 P 值。</p></li>
+<li><p><strong>HEIDI_p</strong>: <strong>HEIDI 检验</strong> 计算得到的 P 值（用于检测 SNP 是否可能存在多效性）。</p></li>
+<li><p><strong>HEIDI_nSNP</strong>: <strong>HEIDI 检验</strong> 中使用的 SNP 数量。</p></li>
+</ul></div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>

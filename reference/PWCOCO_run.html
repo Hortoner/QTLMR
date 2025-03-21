@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.34</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -175,8 +175,22 @@
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>返回一个包含共定位分析结果的数据框（data frame），该数据框包括每个SNP的共定位分析结果，如H4值、P值等。</p>
-    </div>
+    <p>返回一个包含 <strong>共定位（colocalization）分析</strong> 结果的数据框（data frame），其中每一行对应一个 <strong>SNP</strong> 的共定位分析结果。
+主要包括以下列：</p><ul><li><p><strong>Dataset1</strong>: 第一个数据集（通常为 GWAS 数据）。</p></li>
+<li><p><strong>Dataset2</strong>: 第二个数据集（通常为 eQTL 或其他功能性基因组数据）。</p></li>
+<li><p><strong>SNP1</strong>: 数据集 1 中的 SNP。</p></li>
+<li><p><strong>SNP2</strong>: 数据集 2 中的 SNP（若为相同基因组区间，可能相同）。</p></li>
+<li><p><strong>nsnps</strong>: 参与共定位分析的 SNP 总数。</p></li>
+<li><p><strong>H0</strong>: 该区域无关联（无 GWAS 或 eQTL 信号）的后验概率（PP）。</p></li>
+<li><p><strong>H1</strong>: 仅 GWAS 具有信号的后验概率（PP）。</p></li>
+<li><p><strong>H2</strong>: 仅 eQTL 具有信号的后验概率（PP）。</p></li>
+<li><p><strong>H3</strong>: GWAS 和 eQTL 具有独立信号的后验概率（PP）。</p></li>
+<li><p><strong>H4</strong>: GWAS 和 eQTL <strong>共享相同因果变异（causal variant）</strong> 的后验概率（PP）。</p></li>
+<li><p><strong>log_abf_all</strong>: 所有模型的对数 Bayes 因子（log_ABF）。</p></li>
+</ul><p><strong>注意</strong>：</p><ul><li><p>若数据未经条件化（unconditioned），SNP 列将显示 <code>"unconditioned"</code> 而非具体 SNP 名称。</p></li>
+<li><p><strong>程序默认输出</strong> 以 <code>.coloc</code> 结尾的文件，存储每次共定位分析的结果。</p></li>
+<li><p>若运行两次并使用相同的输出文件名，结果 <strong>不会被覆盖</strong>，而是 <strong>追加</strong> 到已有文件中。</p></li>
+</ul></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>输入sum_stats文件格式要求：表型文件不需要特定的文件格式，而是需要遵循以下结构：</p>
@@ -192,7 +206,27 @@
 <li><p><strong>case</strong>：病例数（可选），用于病例对照研究中的病例数。</p></li>
 </ul><p>对于二分类数据，<code>n</code>和<code>case</code>列是可选的。包括这些列时，PWCoCo会将数据视为二分类数据数据（case/control data）进行共定位分析，
 而不是连续型数据（quantitative data），连续型数据只需要<code>n</code>列（样本总数）。这些列也可以通过命令行参数传递。</p>
-    </div>
+<p>该分析基于 <strong>贝叶斯共定位（Bayesian colocalization）</strong> 方法，评估 GWAS 和功能性数据（如 eQTL、pQTL 或 mQTL）是否 <strong>共享相同的因果变异（causal variant）</strong>。</p>
+<p><strong>额外输出文件</strong>：</p><ul><li><p><code>.included</code> 文件：列出每个数据集中被纳入分析的 SNPs。</p></li>
+<li><p><code>.cojo</code> 文件：若 <strong>out_cond</strong> 选项设为 <code>TRUE</code>，程序将在 <strong>条件化分析（conditional analysis）</strong> 后，输出以下列：</p><ul><li><p><strong>Chr</strong>: 染色体编号。</p></li>
+<li><p><strong>SNP</strong>: SNP rsID。</p></li>
+<li><p><strong>bp</strong>: 基因组坐标（碱基对位置）。</p></li>
+<li><p><strong>refA</strong>: 参考等位基因（Reference Allele）。</p></li>
+<li><p><strong>freq</strong>: 参考等位基因的频率。</p></li>
+<li><p><strong>b</strong>: 估计的效应大小（Beta）。</p></li>
+<li><p><strong>se</strong>: Beta 的标准误（Standard Error）。</p></li>
+<li><p><strong>p</strong>: 原始数据集中的 P 值。</p></li>
+<li><p><strong>n</strong>: 样本量（Sample Size）。</p></li>
+<li><p><strong>freq_geno</strong>: 基因型频率。</p></li>
+<li><p><strong>bC</strong>: <strong>条件化分析后</strong> 的效应大小（Beta）。</p></li>
+<li><p><strong>bC_se</strong>: <strong>条件化分析后</strong> 的 Beta 标准误。</p></li>
+<li><p><strong>pC</strong>: <strong>条件化分析后</strong> 的 P 值。</p></li>
+<li><p><strong>rs12345</strong>: 关联信号的 <strong>lead SNP</strong>，列中值为当前 SNP 与 lead SNP 之间的 <strong>LD（r²）</strong> 值。</p></li>
+</ul></li>
+</ul><p><strong>文件命名规则</strong>：</p><ul><li><p><code>.cojo</code> 文件名中会包含 lead SNP 的 rsID，以便区分来自相同数据集的不同条件化结果。</p></li>
+</ul><p><strong>共定位分析的意义</strong>：</p><ul><li><p>若 <strong>H4 后验概率（PP.H4）接近 1</strong>，说明 <strong>GWAS 信号和功能性数据信号（eQTL/pQTL）可能来源于同一因果变异</strong>，提示该基因可能是潜在的致病基因。</p></li>
+<li><p>若 <strong>H3 后验概率（PP.H3）较高</strong>，则表明 <strong>GWAS 信号和功能性信号可能来自不同的因果变异</strong>，可能存在独立的调控机制。</p></li>
+</ul></div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
