@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.34</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,6 +66,12 @@
 
         </dt>
         <dd>配置百度网盘python环境</dd>
+      </dl><dl><dt>
+
+          <code><a href="Baidu_upload.html">Baidu_upload()</a></code>
+
+        </dt>
+        <dd>上传文件至百度网盘中</dd>
       </dl><dl><dt>
 
           <code><a href="Baidu_download.html">Baidu_download()</a></code>
@@ -301,55 +307,55 @@
           <code><a href="format_dat.html">format_dat()</a></code>
 
         </dt>
-        <dd>数据格式转换与清洗</dd>
+        <dd>通用GWAS数据清洗与格式转换</dd>
       </dl><dl><dt>
 
           <code><a href="format_data_FinnGen.html">format_data_FinnGen()</a></code>
 
         </dt>
-        <dd>将FinnGen数据库.gz文件转换为标准TwosampleMR、SMR、METAL、MTAG分析文件</dd>
+        <dd>将FinnGen数据库.gz文件数据清洗与格式转换</dd>
       </dl><dl><dt>
 
           <code><a href="format_data_Catalog.html">format_data_Catalog()</a></code>
 
         </dt>
-        <dd>将GWAS Catalog数据库.gz或.tsv文件转换为标准TwosampleMR、SMR、METAL、MTAG分析文件</dd>
+        <dd>将GWAS Catalog数据库.gz或.tsv文件清洗与格式转换</dd>
       </dl><dl><dt>
 
           <code><a href="format_data_ukb_Neale.html">format_data_ukb_Neale()</a></code>
 
         </dt>
-        <dd>将ukb nealelab数据库tsv.bgz文件转换为标准TwosampleMR、SMR、METAL、MTAG分析文件</dd>
+        <dd>将ukb nealelab数据库tsv.bgz文件清洗与格式转换</dd>
       </dl><dl><dt>
 
           <code><a href="format_data_IEU_VCF.html">format_data_IEU_VCF()</a></code>
 
         </dt>
-        <dd>在线或本地读取IEU数据库.VCF文件转换为标准TwosampleMR、SMR、METAL、MTAG分析文件</dd>
+        <dd>IEU数据库.VCF文件数据格式转换</dd>
       </dl><dl><dt>
 
           <code><a href="format_data_METAL.html">format_data_METAL()</a></code>
 
         </dt>
-        <dd>将METAL分析结果数据转换为标准TwosampleMR、SMR文件</dd>
+        <dd>将METAL分析结果数据格式转换</dd>
       </dl><dl><dt>
 
           <code><a href="format_data_decode.html">format_data_decode()</a></code>
 
         </dt>
-        <dd>将decode原始数据txt.gz文件重注释转换为标准TwosampleMR、SMR、coloc共定位文件</dd>
+        <dd>将decode原始数据文件重注释与格式转换</dd>
       </dl><dl><dt>
 
           <code><a href="format_data_ukb_pQTL_cis.html">format_data_ukb_pQTL_cis()</a></code>
 
         </dt>
-        <dd>将ukb_ppp基因所在染色体的数据.gz文件重注释转换为标准SMR、coloc共定位文件</dd>
+        <dd>ukb_ppp项目.gz文件数据提取与格式转换</dd>
       </dl><dl><dt>
 
           <code><a href="format_data_fenland.html">format_data_fenland()</a></code>
 
         </dt>
-        <dd>将fenland pQTL原始数据txt.gz文件为标准TwosampleMR、SMR、coloc共定位文件</dd>
+        <dd>将fenland pQTL原始数据格式转换与清洗</dd>
       </dl><dl><dt>
 
           <code><a href="GWAS_liftover.html">GWAS_liftover()</a></code>
@@ -559,7 +565,7 @@
           <code><a href="LDSC_MRlap.html">LDSC_MRlap()</a></code>
 
         </dt>
-        <dd>使用MRlap包分析交叉性状遗传相关性，矫正样本重叠引起的IVW-MR分析的偏差</dd>
+        <dd>使用MRlap包矫正样本重叠引起的IVW-MR分析的偏差</dd>
       </dl><dl><dt>
 
           <code><a href="LDSC_ldscr_h2.html">LDSC_ldscr_h2()</a></code>
@@ -583,7 +589,7 @@
           <code><a href="LDSC_py_sumstats.html">LDSC_py_sumstats()</a></code>
 
         </dt>
-        <dd>使用ldsc软件生成.sumstats.gz格式文件(表头：SNP A1 A2 N Z)</dd>
+        <dd>使用ldsc软件生成.sumstats.gz格式文件</dd>
       </dl><dl><dt>
 
           <code><a href="LDSC_py_h2.html">LDSC_py_h2()</a></code>
@@ -858,7 +864,7 @@
           <code><a href="TWAS_fusion_format_data.html">TWAS_fusion_format_data()</a></code>
 
         </dt>
-        <dd>将TwosampleMR格式转换成TWAS Fusion分析输入格式数据</dd>
+        <dd>Fusion分析输入格式数据转换</dd>
       </dl><dl><dt>
 
           <code><a href="TWAS_fusion_assoc_test.html">TWAS_fusion_assoc_test()</a></code>
@@ -1004,19 +1010,19 @@
           <code><a href="TWAS_FOCUS_format_data.html">TWAS_FOCUS_format_data()</a></code>
 
         </dt>
-        <dd>将TwosampleMR格式转换成TWAS FOCUS分析输入格式数据</dd>
+        <dd>FOCUS分析的输入格式数据转换</dd>
       </dl><dl><dt>
 
           <code><a href="TWAS_FOCUS_test.html">TWAS_FOCUS_test()</a></code>
 
         </dt>
-        <dd>使用FOCUS软件进行TWAS的基因-性状关联信号精细定位分析</dd>
+        <dd>使用FOCUS软件进行精细定位分析</dd>
       </dl><dl><dt>
 
           <code><a href="TWAS_FOCUS_Multi_test.html">TWAS_FOCUS_Multi_test()</a></code>
 
         </dt>
-        <dd>使用FOCUS软件进行循环多种组织TWAS的基因-性状关联信号精细定位分析</dd>
+        <dd>使用FOCUS软件进行多种组织精细定位分析</dd>
       </dl></div><div class="section level2">
 
       <h3 id="-magma-">24.MAGMA分析<a class="anchor" aria-label="anchor" href="#-magma-"></a></h3>
@@ -1159,7 +1165,36 @@
         <dd>使用PLACO进行复合零假设下的多效性分析</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="-fm-summary-">28.FM_summary分析<a class="anchor" aria-label="anchor" href="#-fm-summary-"></a></h3>
+      <h3 id="-gsmap-">28.gsMap分析<a class="anchor" aria-label="anchor" href="#-gsmap-"></a></h3>
+
+
+
+    </div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="gsMap_py_install.html">gsMap_py_install()</a></code>
+
+        </dt>
+        <dd>配置gsMap软件环境</dd>
+      </dl><dl><dt>
+
+          <code><a href="gsMap_format_sumstats.html">gsMap_format_sumstats()</a></code>
+
+        </dt>
+        <dd>将GWAS数据格式化成gsMap分析输入数据</dd>
+      </dl><dl><dt>
+
+          <code><a href="gsMap_quick_mode.html">gsMap_quick_mode()</a></code>
+
+        </dt>
+        <dd>使用gsMap进行遗传信息的细胞空间映射分析</dd>
+      </dl></div><div class="section level2">
+
+      <h3 id="-fm-summary-">29.FM_summary分析<a class="anchor" aria-label="anchor" href="#-fm-summary-"></a></h3>
 
 
 
@@ -1176,7 +1211,7 @@
         <dd>简化的贝叶斯精细定位方法（FM-summary）</dd>
       </dl></div><div class="section level2">
 
-      <h3 id="--5">29.其它分析功能<a class="anchor" aria-label="anchor" href="#--5"></a></h3>
+      <h3 id="--5">30.其它分析功能<a class="anchor" aria-label="anchor" href="#--5"></a></h3>
 
 
 

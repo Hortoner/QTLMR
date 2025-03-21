@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.34</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -125,12 +125,21 @@
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>分析结果。</p>
-    </div>
-    <div class="section level2">
-    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>目的是通过结合基因组关联研究（GWAS）的汇总统计数据和基因表达数据，来预测和测试基因表达与特定疾病或表型之间的相关性。</p>
-    </div>
+    <p>生成一个 CSV 结果文件，每行代表一个基因在特定表型-组织组合下的关联分析结果，包含以下字段：</p><ul><li><p>gene: 基因 ID（ENSEMBL ID 或内含子 ID）。</p></li>
+<li><p>gene_name: 基因名称（HUGO 标准命名）或内含子 ID。</p></li>
+<li><p>zscore: 预测的关联 z 评分，表示基因表达或剪切与表型的关联方向和强度。</p></li>
+<li><p>effect_size: 估计的效应值，表示基因表达或剪切水平变化对表型的影响大小。</p></li>
+<li><p>pvalue: 关联分析的 p 值，评估基因表达或剪切水平与表型的统计显著性。</p></li>
+<li><p>var_g: 预测表达或剪切水平的方差估计，计算公式为 W' * G * W，其中 W 为基因模型中的 SNP 权重向量，W' 为其转置，G 为 GWAS SNP 之间的 LD 矩阵。</p></li>
+<li><p>pred_perf_r2: 预测模型的交叉验证决定系数 R²，衡量模型在独立数据集上的解释能力。</p></li>
+<li><p>pred_perf_pval: 预测模型的交叉验证 p 值，衡量模型预测性能的统计显著性。</p></li>
+<li><p>pred_perf_qval: 该字段已废弃，仅保留为空字段以保持兼容性。</p></li>
+<li><p>n_snps_used: 该模型中与 GWAS 数据集交叉的 SNP 数量。</p></li>
+<li><p>n_snps_in_cov: 用于 LD 计算的 SNP 总数。</p></li>
+<li><p>n_snps_in_model: 该基因表达预测模型中包含的 SNP 总数。</p></li>
+<li><p>best_gwas_p: 该模型中使用的 SNP 中最小的 GWAS p 值，反映最显著的单 SNP 关联。</p></li>
+<li><p>largest_weight: 预测模型中绝对值最大的 SNP 权重，表明最具影响力的 SNP 对基因表达预测的贡献。</p></li>
+</ul></div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>

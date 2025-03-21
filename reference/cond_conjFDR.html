@@ -9,7 +9,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.34</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +48,9 @@
 <span>  trait_names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"trait1"</span>, <span class="st">"trait2"</span><span class="op">)</span>,</span>
 <span>  refdata_location <span class="op">=</span> <span class="st">"./REF_DIR"</span>,</span>
 <span>  n_iter <span class="op">=</span> <span class="fl">50</span>,</span>
-<span>  seed <span class="op">=</span> <span class="fl">154226</span></span>
+<span>  seed <span class="op">=</span> <span class="fl">154226</span>,</span>
+<span>  save_name <span class="op">=</span> <span class="st">"res"</span>,</span>
+<span>  save_path <span class="op">=</span> <span class="st">"./cond_conjFDR"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -74,6 +76,14 @@
 
 <dt id="arg-seed">seed<a class="anchor" aria-label="anchor" href="#arg-seed"></a></dt>
 <dd><p>整数，设置随机种子数。默认154226。</p></dd>
+
+
+<dt id="arg-save-name">save_name<a class="anchor" aria-label="anchor" href="#arg-save-name"></a></dt>
+<dd><p>字符串，输出文件名。</p></dd>
+
+
+<dt id="arg-save-path">save_path<a class="anchor" aria-label="anchor" href="#arg-save-path"></a></dt>
+<dd><p>字符串，存储结果文件的目录。</p></dd>
 
 </dl></div>
     <div class="section level2">

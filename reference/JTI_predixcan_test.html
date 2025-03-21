@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.34</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -115,12 +115,14 @@
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>分析结果。</p>
-    </div>
-    <div class="section level2">
-    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>目的是通过结合基因组关联研究（GWAS）的汇总统计数据和基因表达数据，来预测和测试基因表达与特定疾病或表型之间的相关性。</p>
-    </div>
+    <p>生成一个 CSV 结果文件，每行代表一个基因在特定表型下的关联分析结果，包含以下字段：</p><ul><li><p>gene: 基因 ID（ENSEMBL ID 或内含子 ID）。</p></li>
+<li><p>effect: 估计的效应值，表示基因表达水平变化对表型的影响大小。</p></li>
+<li><p>se: 估计的效应值标准误，衡量效应估计的不确定性。</p></li>
+<li><p>zscore: 预测的关联 z 评分，反映基因表达水平与表型的关联方向和显著性。</p></li>
+<li><p>pvalue: 关联分析的 p 值，评估基因表达水平与表型的统计显著性。</p></li>
+<li><p>n_samples: 用于分析的样本数量，决定了统计检验的有效性。</p></li>
+<li><p>status: 计算过程中是否存在错误，若有则记录具体错误信息。</p></li>
+</ul></div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
