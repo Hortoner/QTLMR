@@ -1,9 +1,9 @@
-pandoc: 3.1.11
-pkgdown: 2.1.1
+pandoc: '3.2'
+pkgdown: 2.1.0
 pkgdown_sha: ~
 articles:
   1.跨组织转录组关联研究寻找疾病易感基因: 1.跨组织转录组关联研究寻找疾病易感基因.html
-last_built: 2025-03-21T08:12Z
+last_built: 2025-04-05T13:25Z
 urls:
   reference: https://hortoner.github.io/QTLMR/reference
   article: https://hortoner.github.io/QTLMR/articles
