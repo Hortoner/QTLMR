@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.43</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,23 +54,23 @@
 
 
 <dl><dt id="arg-gene-annot-path">gene_annot_path<a class="anchor" aria-label="anchor" href="#arg-gene-annot-path"></a></dt>
-<dd><p>基因注释文件的路径。该文件应包含 ENSGID 列，用于将特征文件中的数据与基因信息进行匹配。</p></dd>
+<dd><p>字符串，基因注释文件的路径。该文件应包含 ENSGID 列，用于将特征文件中的数据与基因信息进行匹配。</p></dd>
 
 
 <dt id="arg-feature-dir">feature_dir<a class="anchor" aria-label="anchor" href="#arg-feature-dir"></a></dt>
-<dd><p>特征文件所在的文件夹路径。该文件夹内的每个文件应为以制表符分隔的文件，第一列应为 ENSGID，且每个特征文件的列名应唯一。可以通过将文件名前缀添加到每列的列名中，确保列名唯一。</p></dd>
+<dd><p>字符串，特征文件所在的文件夹路径。该文件夹内的每个文件应为以制表符分隔的文件，第一列应为 ENSGID，且每个特征文件的列名应唯一。可以通过将文件名前缀添加到每列的列名中，确保列名唯一。</p></dd>
 
 
 <dt id="arg-max-cols">max_cols<a class="anchor" aria-label="anchor" href="#arg-max-cols"></a></dt>
-<dd><p>每个输出分块中的最大列数。默认为 5000，PoPS 会将特征文件划分为多个块，确保每个块的列数不超过该值，以便提高计算效率和内存管理。</p></dd>
+<dd><p>整数，每个输出分块中的最大列数。默认为 5000，PoPS 会将特征文件划分为多个块，确保每个块的列数不超过该值，以便提高计算效率和内存管理。</p></dd>
 
 
 <dt id="arg-save-name">save_name<a class="anchor" aria-label="anchor" href="#arg-save-name"></a></dt>
-<dd><p>输出文件的前缀名称。PoPS 将根据该名称保存处理后的特征文件和相关数据。</p></dd>
+<dd><p>字符串，输出文件的前缀名称。PoPS 将根据该名称保存处理后的特征文件和相关数据。</p></dd>
 
 
 <dt id="arg-save-path">save_path<a class="anchor" aria-label="anchor" href="#arg-save-path"></a></dt>
-<dd><p>预处理结果保存路径。处理后的特征文件将保存到该路径下。</p></dd>
+<dd><p>字符串，预处理结果保存路径。处理后的特征文件将保存到该路径下。</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -90,7 +90,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer></div>

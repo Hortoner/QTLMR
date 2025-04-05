@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.43</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,132 +80,132 @@
 
 
 <dl><dt id="arg-gwas-file">GWAS_file<a class="anchor" aria-label="anchor" href="#arg-gwas-file"></a></dt>
-<dd><p>smr分析中的gwas文件，需要提前准备好。</p></dd>
+<dd><p>字符串，SMR分析中的GWAS文件路径，需要提前准备好。</p></dd>
 
 
 <dt id="arg-gwas-name">GWAS_name<a class="anchor" aria-label="anchor" href="#arg-gwas-name"></a></dt>
-<dd><p>GWAS的名称。</p></dd>
+<dd><p>字符串，GWAS数据集的名称。</p></dd>
 
 
 <dt id="arg-xqtl-file">xQTL_file<a class="anchor" aria-label="anchor" href="#arg-xqtl-file"></a></dt>
-<dd><p>smr分析的二进制数据文件。</p></dd>
+<dd><p>字符串，SMR分析的二进制数据文件路径。</p></dd>
 
 
 <dt id="arg-bfile-g">bfile_1000G<a class="anchor" aria-label="anchor" href="#arg-bfile-g"></a></dt>
-<dd><p>千人基因组参考面板数据文件的前缀路径（如：<code>./1.data/1000G/EUR</code>）。</p></dd>
+<dd><p>字符串，千人基因组参考面板数据文件的前缀路径（如：<code>./1.data/1000G/EUR</code>）。</p></dd>
 
 
 <dt id="arg-gene-list">gene_list<a class="anchor" aria-label="anchor" href="#arg-gene-list"></a></dt>
-<dd><p>用于绘图的基因注释文件路径。</p></dd>
+<dd><p>字符串，基因注释文件的路径，用于绘图。</p></dd>
 
 
 <dt id="arg-probe">probe<a class="anchor" aria-label="anchor" href="#arg-probe"></a></dt>
-<dd><p>指定probeID，具体见.smr文件的probeID列。</p></dd>
+<dd><p>字符串，指定probeID，具体见.smr文件中的probeID列。</p></dd>
 
 
 <dt id="arg-probe-wind">probe_wind<a class="anchor" aria-label="anchor" href="#arg-probe-wind"></a></dt>
-<dd><p>定义以指定探针为中心的窗口范围，默认为500kb。</p></dd>
+<dd><p>数值，定义以指定探针为中心的窗口范围，默认为500kb。</p></dd>
 
 
 <dt id="arg-save-path">save_path<a class="anchor" aria-label="anchor" href="#arg-save-path"></a></dt>
-<dd><p>SMR作图数据输出文件的路径。</p></dd>
+<dd><p>字符串，SMR作图数据输出文件的路径。</p></dd>
 
 
 <dt id="arg-diff-freq">diff_freq<a class="anchor" aria-label="anchor" href="#arg-diff-freq"></a></dt>
-<dd><p>对等位基因频率进行质量控制，如果SNP的效应等位基因频率差异在两两配对的数据集中（包括the LD reference sample, the eQTL summary data and the GWAS summary data）的超过指定的差异阈值，将排除该SNP。默认为0.2。</p></dd>
+<dd><p>数值，对等位基因频率进行质量控制，默认值为0.2。表示SNP的效应等位基因频率差异超过该值会被排除。</p></dd>
 
 
 <dt id="arg-diff-freq-prop">diff_freq_prop<a class="anchor" aria-label="anchor" href="#arg-diff-freq-prop"></a></dt>
-<dd><p>SMR分析中，允许具有等位基因频率差异的的SNP的最大比例。如果由diff_freq排除的SNP比率大于diff_freq_prop指定的阈值，SMR分析将停止（提示错误信息）。默认值为0.05。</p></dd>
+<dd><p>数值，SMR分析中，允许具有等位基因频率差异的SNP的最大比例。默认值为0.05。</p></dd>
 
 
 <dt id="arg-maf">MAF<a class="anchor" aria-label="anchor" href="#arg-maf"></a></dt>
-<dd><p>根据参考样本中的次要等位基因频率（MAF）阈值去除SNP，默认值为0.01。maf的取值范围在0-0.5。</p></dd>
+<dd><p>数值，根据参考样本中的次要等位基因频率（MAF）阈值去除SNP，默认为0.01。取值范围在0-0.5。</p></dd>
 
 
 <dt id="arg-cis-wind">cis_wind<a class="anchor" aria-label="anchor" href="#arg-cis-wind"></a></dt>
-<dd><p>SMR分析中，定义一个以探针为中心的染色体范围，以选择cis-eQTL（通过p值阈值）进行SMR分析。默认值为2000Kb。</p></dd>
+<dd><p>数值，SMR分析中定义的以探针为中心的染色体范围，选择cis-eQTL进行分析，默认为2000Kb。</p></dd>
 
 
 <dt id="arg-pval">pval<a class="anchor" aria-label="anchor" href="#arg-pval"></a></dt>
-<dd><p>筛选用于SMR分析的top显著相关QTL（如eQTL）的p值，默认为5.0e-8。</p></dd>
+<dd><p>数值，筛选用于SMR分析的显著QTL的p值，默认为5.0e-8。</p></dd>
 
 
 <dt id="arg-smr-multi">smr_multi<a class="anchor" aria-label="anchor" href="#arg-smr-multi"></a></dt>
-<dd><p>是否进行基于多个SNP的smr分析，默认为TRUE，反之则使用top snp进行SMR分析。</p></dd>
+<dd><p>逻辑值，是否进行基于多个SNP的SMR分析，默认为TRUE，反之则使用top SNP进行分析。</p></dd>
 
 
 <dt id="arg-smr-multi-set-wind">smr_multi_set_wind<a class="anchor" aria-label="anchor" href="#arg-smr-multi-set-wind"></a></dt>
-<dd><p>选定基于多个snp进行SMR分析的基因区域，定义最显著cis-QTL为中心的染色体区域。 默认是选择smr_cis_wind内所有的snp进行SMR分析，默认为NULL。反之，可进行自己指定，如500kb，写作500。</p></dd>
+<dd><p>数值或NULL，选定基于多个SNP进行SMR分析的基因区域，定义最显著cis-QTL为中心的染色体区域，默认为NULL。</p></dd>
 
 
 <dt id="arg-smr-multi-ld-snp">smr_multi_ld_snp<a class="anchor" aria-label="anchor" href="#arg-smr-multi-ld-snp"></a></dt>
-<dd><p>除纳入SMR分析的QTLs（如eQTL）中存在连锁不平衡的QTLs，默认值是0.1。</p></dd>
+<dd><p>数值，连锁不平衡的QTL阈值，默认值为0.1。</p></dd>
 
 
 <dt id="arg-heidi-mtd">heidi_mtd<a class="anchor" aria-label="anchor" href="#arg-heidi-mtd"></a></dt>
-<dd><p>HEIDI检验中，指定一个方法进行HEIDI检验。0是最初的原始HEIDI检验，由Zhu et al (2016 Nature Genetics)提出；1是新的HEIDI检验，模拟结果表明，使用cis-eQTL区域中排名前20位的SNP（按照p值进行排序）进行异质性测试，HEIDI测试的功效最初增加，但随着SNP数量（m）的增加而降低，峰值在m = ~20。默认值为1。</p></dd>
+<dd><p>数值，HEIDI检验方法选择。0为原始HEIDI检验，1为新的HEIDI检验，默认值为1。</p></dd>
 
 
 <dt id="arg-heidi-test-pval">HEIDI_test_pval<a class="anchor" aria-label="anchor" href="#arg-heidi-test-pval"></a></dt>
-<dd><p>HEIDI检验中，筛选用于HEIDI检验的QTL的p值，默认p值为1.57e-3，相当于卡方值（df=1）10。</p></dd>
+<dd><p>数值，HEIDI检验的QTL的p值筛选，默认值为1.57e-3。</p></dd>
 
 
 <dt id="arg-ld-upper">ld_upper<a class="anchor" aria-label="anchor" href="#arg-ld-upper"></a></dt>
-<dd><p>HEIDI检验中，用于排除与top SNP存在显著连锁不平衡的QTL(如eQTL),默认值是0.9。</p></dd>
+<dd><p>数值，HEIDI检验中用于排除与top SNP存在显著连锁不平衡的QTL的阈值，默认值为0.9。</p></dd>
 
 
 <dt id="arg-ld-lower">ld_lower<a class="anchor" aria-label="anchor" href="#arg-ld-lower"></a></dt>
-<dd><p>HEIDI检验中，用于排除与top SNP不存在连锁不平衡或者微弱连锁不平衡的QTL(如eQTL),默认值是0.05。</p></dd>
+<dd><p>数值，HEIDI检验中用于排除与top SNP不存在或微弱连锁不平衡的QTL的阈值，默认值为0.05。</p></dd>
 
 
 <dt id="arg-nsnps-min">nSNPs_min<a class="anchor" aria-label="anchor" href="#arg-nsnps-min"></a></dt>
-<dd><p>HEIDI检验中，使用顺式snp数量的最小数量，小于该阈值将不进行HEIDI检验。因为如果SNP的数量太少，HEIDI测试检测异质性的能力很小，并可能产生误导性的结果。默认值为3。</p></dd>
+<dd><p>数值，HEIDI检验中使用顺式SNP的最小数量，默认值为3。</p></dd>
 
 
 <dt id="arg-nsnps-max">nSNPs_max<a class="anchor" aria-label="anchor" href="#arg-nsnps-max"></a></dt>
-<dd><p>HEIDI检验中，使用顺式snp数量的最大数量，如果经过LD筛选后的cis-SNP的数量大于m，则仅使用前m个SNP进行HEIDI检验（按照QTL的p值进行排序），默认值为20。</p></dd>
+<dd><p>数值，HEIDI检验中使用顺式SNP的最大数量，默认值为20。</p></dd>
 
 
 <dt id="arg-thread-num">thread_num<a class="anchor" aria-label="anchor" href="#arg-thread-num"></a></dt>
-<dd><p>指定用于并行计算的线程数。默认值为4。</p></dd>
+<dd><p>数值，指定用于并行计算的线程数，默认值为4。</p></dd>
 
 
 <dt id="arg-smr-locus-plot">SMR_Locus_Plot<a class="anchor" aria-label="anchor" href="#arg-smr-locus-plot"></a></dt>
-<dd><p>是否绘制绘制SMR locus图。</p></dd>
+<dd><p>逻辑值，是否绘制SMR locus图，默认为TRUE。</p></dd>
 
 
 <dt id="arg-smr-effect-plot">SMR_Effect_Plot<a class="anchor" aria-label="anchor" href="#arg-smr-effect-plot"></a></dt>
-<dd><p>是否绘制绘制Effect Plot图。</p></dd>
+<dd><p>逻辑值，是否绘制Effect Plot图，默认为TRUE。</p></dd>
 
 
 <dt id="arg-probenearby">probeNEARBY<a class="anchor" aria-label="anchor" href="#arg-probenearby"></a></dt>
-<dd><p>eQTLs层，可指定感兴趣的探针id以绘制对应的QTLs数据。</p></dd>
+<dd><p>字符串或NULL，eQTLs层，指定感兴趣的探针ID以绘制对应的QTL数据。</p></dd>
 
 
 <dt id="arg-smr-thresh">smr_thresh<a class="anchor" aria-label="anchor" href="#arg-smr-thresh"></a></dt>
-<dd><p>SMR测试的全基因组显著性水平阈值，默认为0.05，一般对p_SMR进行FDR矫正0.05/n,</p></dd>
+<dd><p>数值，SMR测试的全基因组显著性水平阈值，默认为0.05。</p></dd>
 
 
 <dt id="arg-heidi-thresh">heidi_thresh<a class="anchor" aria-label="anchor" href="#arg-heidi-thresh"></a></dt>
-<dd><p>HEIDI测试的阈值，默认值为0.05。</p></dd>
+<dd><p>数值，HEIDI测试的阈值，默认为0.05。</p></dd>
 
 
 <dt id="arg-pointsize">pointsize<a class="anchor" aria-label="anchor" href="#arg-pointsize"></a></dt>
-<dd><p>纵坐标对应标题字体的大小，默认为20。</p></dd>
+<dd><p>数值，纵坐标对应标题字体的大小，默认为20。</p></dd>
 
 
 <dt id="arg-max-anno-probe">max_anno_probe<a class="anchor" aria-label="anchor" href="#arg-max-anno-probe"></a></dt>
-<dd><p>locus图中显示的探针最大数目，默认值为8。</p></dd>
+<dd><p>数值，locus图中显示的探针最大数目，默认为8。</p></dd>
 
 
 <dt id="arg-anno-selfdef">anno_selfdef<a class="anchor" aria-label="anchor" href="#arg-anno-selfdef"></a></dt>
-<dd><p>是否使用使用第三部分的库来排列探针名称,默认为TRUE。</p></dd>
+<dd><p>逻辑值，是否使用第三方库来排列探针名称，默认为TRUE。</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>ReadSMRData函数输入数据。</p>
+    <p>返回ReadSMRData函数输入数据。</p>
     </div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -217,7 +217,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer></div>

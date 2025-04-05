@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.43</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,11 +62,11 @@
 
 
 <dl><dt id="arg-test-help">test_help<a class="anchor" aria-label="anchor" href="#arg-test-help"></a></dt>
-<dd><p>逻辑值，是否调阅SPrediXcan.py的帮助文档，默认FALSE。</p></dd>
+<dd><p>逻辑值，是否调阅SPrediXcan.py的帮助文档，默认值为 <code>FALSE</code>。</p></dd>
 
 
 <dt id="arg-gtex-tissue">GTEX_tissue<a class="anchor" aria-label="anchor" href="#arg-gtex-tissue"></a></dt>
-<dd><p>字符串，GTEx v8组织类型，默认"all"，即对所有组织分析，也可指定组织，如"mashr_Whole_Blood"。</p></dd>
+<dd><p>字符串，GTEx v8组织类型，默认值为 "all"（即对所有组织进行分析），也可指定为特定组织，如"mashr_Whole_Blood"。</p></dd>
 
 
 <dt id="arg-model-db-path">model_db_path<a class="anchor" aria-label="anchor" href="#arg-model-db-path"></a></dt>
@@ -74,35 +74,35 @@
 
 
 <dt id="arg-covariance">covariance<a class="anchor" aria-label="anchor" href="#arg-covariance"></a></dt>
-<dd><p>字符串，包含协方差数据的文件夹的路径。</p></dd>
+<dd><p>字符串，包含协方差数据的文件夹路径。</p></dd>
 
 
 <dt id="arg-gwas-file">gwas_file<a class="anchor" aria-label="anchor" href="#arg-gwas-file"></a></dt>
-<dd><p>字符串，GWAS汇总统计数据的文件路径。</p></dd>
+<dd><p>字符串，GWAS汇总统计数据的文件路径，必须为 <code>TwosampleMR</code> 格式。</p></dd>
 
 
 <dt id="arg-snp-col">snp_col<a class="anchor" aria-label="anchor" href="#arg-snp-col"></a></dt>
-<dd><p>字符串，GWAS 文件中rsid 对应的列名。</p></dd>
+<dd><p>字符串，GWAS文件中 rsid 对应的列名。</p></dd>
 
 
 <dt id="arg-effect-allele-col">effect_allele_col<a class="anchor" aria-label="anchor" href="#arg-effect-allele-col"></a></dt>
-<dd><p>字符串，GWAS 文件中效应等位基因的列名。</p></dd>
+<dd><p>字符串，GWAS文件中效应等位基因的列名。</p></dd>
 
 
 <dt id="arg-other-allele-col">other_allele_col<a class="anchor" aria-label="anchor" href="#arg-other-allele-col"></a></dt>
-<dd><p>字符串，GWAS 文件中非效应等位基因的列名。</p></dd>
+<dd><p>字符串，GWAS文件中非效应等位基因的列名。</p></dd>
 
 
 <dt id="arg-zscore-col">zscore_col<a class="anchor" aria-label="anchor" href="#arg-zscore-col"></a></dt>
-<dd><p>字符串，GWAS 文件中 Z 评分对应的列名。</p></dd>
+<dd><p>字符串，GWAS文件中 Z 评分对应的列名。</p></dd>
 
 
 <dt id="arg-opt-arguments">opt_arguments<a class="anchor" aria-label="anchor" href="#arg-opt-arguments"></a></dt>
-<dd><p>SPrediXcan.py的其他命令行参数(设置test_help=TRUE查看)，默认NULL。</p></dd>
+<dd><p>字符串，SPrediXcan.py的其他命令行参数（设置<code>test_help=TRUE</code>查看帮助文档），默认值为 <code>NULL</code>。</p></dd>
 
 
 <dt id="arg-cores">cores<a class="anchor" aria-label="anchor" href="#arg-cores"></a></dt>
-<dd><p>数值，并行运算电脑的线程数。</p></dd>
+<dd><p>数值，表示并行运算时使用的电脑线程数，默认值为 <code>1</code>。</p></dd>
 
 
 <dt id="arg-save-name">save_name<a class="anchor" aria-label="anchor" href="#arg-save-name"></a></dt>
@@ -115,7 +115,7 @@
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>无返回值，在指定文件夹生成结果。</p>
+    <p>无返回值。生成的结果将保存在指定的 <code>save_path</code> 文件夹中。</p>
     </div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -127,7 +127,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer></div>

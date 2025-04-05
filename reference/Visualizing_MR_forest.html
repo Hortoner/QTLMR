@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.43</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,68 +64,68 @@
 
 
 <dl><dt id="arg-res">res<a class="anchor" aria-label="anchor" href="#arg-res"></a></dt>
-<dd><p>mr或xQTL_mr分析结果。</p></dd>
+<dd><p>数据框，mr或xQTL_mr分析结果。</p></dd>
 
 
 <dt id="arg-fdr-col">fdr_col<a class="anchor" aria-label="anchor" href="#arg-fdr-col"></a></dt>
-<dd><p>经过多重检验矫正后的P值列名，默认"fdr"（没有该列，不影响绘图）。</p></dd>
+<dd><p>字符串，经过多重检验矫正后的P值列名，默认值为"fdr"（若没有该列，不影响绘图）。</p></dd>
 
 
 <dt id="arg-ci-col">ci_col<a class="anchor" aria-label="anchor" href="#arg-ci-col"></a></dt>
-<dd><p>置信区间线的颜色，默认为"#000000"（黑色）。</p></dd>
+<dd><p>字符串，置信区间线的颜色，默认为"#000000"（黑色）。</p></dd>
 
 
 <dt id="arg-ci-fill">ci_fill<a class="anchor" aria-label="anchor" href="#arg-ci-fill"></a></dt>
-<dd><p>置信区间填充的颜色，默认为"#000000"（黑色）。</p></dd>
+<dd><p>字符串，置信区间填充的颜色，默认为"#000000"（黑色）。</p></dd>
 
 
 <dt id="arg-ci-lwd">ci_lwd<a class="anchor" aria-label="anchor" href="#arg-ci-lwd"></a></dt>
-<dd><p>置信区间线的粗细，默认为1。</p></dd>
+<dd><p>数值，置信区间线的粗细，默认为1。</p></dd>
 
 
 <dt id="arg-ci-sizes">ci_sizes<a class="anchor" aria-label="anchor" href="#arg-ci-sizes"></a></dt>
-<dd><p>置信区间点大小，默认为0.6。</p></dd>
+<dd><p>数值，置信区间点的大小，默认为0.6。</p></dd>
 
 
 <dt id="arg-xlim">xlim<a class="anchor" aria-label="anchor" href="#arg-xlim"></a></dt>
-<dd><p>x轴的范围，默认为c(0, 3.5)。</p></dd>
+<dd><p>数值向量，x轴的范围，默认为c(0, 3.5)。</p></dd>
 
 
 <dt id="arg-ticks-at">ticks_at<a class="anchor" aria-label="anchor" href="#arg-ticks-at"></a></dt>
-<dd><p>x轴上刻度标签的位置，默认为c(0, 0.5, 1, 2, 3, 3.5)。</p></dd>
+<dd><p>数值向量，x轴上刻度标签的位置，默认为c(0, 0.5, 1, 2, 3, 3.5)。</p></dd>
 
 
 <dt id="arg-space-padding">space_padding<a class="anchor" aria-label="anchor" href="#arg-space-padding"></a></dt>
-<dd><p>用于生成空格的值，默认为22。</p></dd>
+<dd><p>数值，用于生成空格的值，默认为22。</p></dd>
 
 
 <dt id="arg-arrange-or">arrange_OR<a class="anchor" aria-label="anchor" href="#arg-arrange-or"></a></dt>
-<dd><p>是否对森林图的OR值进行降序排序，默认为FALSE。</p></dd>
+<dd><p>布尔值，是否对森林图中的OR值进行降序排序，默认为FALSE。</p></dd>
 
 
 <dt id="arg-save-plot">save_plot<a class="anchor" aria-label="anchor" href="#arg-save-plot"></a></dt>
-<dd><p>是否保存图形为文件，默认为FALSE。</p></dd>
+<dd><p>布尔值，是否将图形保存为文件，默认为FALSE。</p></dd>
 
 
 <dt id="arg-width">width<a class="anchor" aria-label="anchor" href="#arg-width"></a></dt>
-<dd><p>图形保存时的宽度，默认为8。</p></dd>
+<dd><p>数值，图形保存时的宽度，默认为8。</p></dd>
 
 
 <dt id="arg-height">height<a class="anchor" aria-label="anchor" href="#arg-height"></a></dt>
-<dd><p>图形保存时的高度，默认为5。</p></dd>
+<dd><p>数值，图形保存时的高度，默认为5。</p></dd>
 
 
 <dt id="arg-plot-pdf">plot_pdf<a class="anchor" aria-label="anchor" href="#arg-plot-pdf"></a></dt>
-<dd><p>图形保存的文件名，默认为"forest_plot"。</p></dd>
+<dd><p>字符串，图形保存的文件名，默认为"forest_plot"。</p></dd>
 
 
 <dt id="arg-save-path">save_path<a class="anchor" aria-label="anchor" href="#arg-save-path"></a></dt>
-<dd><p>保存图形的文件夹路径，默认为当前工作目录下的"./"。</p></dd>
+<dd><p>字符串，保存图形的文件夹路径，默认为当前工作目录下的"./"。</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>无直接返回值</p>
+    <p>无直接返回值，生成并（如果save_plot为TRUE）保存一个森林图。</p>
     </div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -137,7 +137,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer></div>

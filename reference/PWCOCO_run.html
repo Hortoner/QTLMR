@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.43</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,103 +74,103 @@
 
 
 <dl><dt id="arg-bfile">bfile<a class="anchor" aria-label="anchor" href="#arg-bfile"></a></dt>
-<dd><p>基因型数据的plink文件前缀路径。勿使用MAF&gt;0.01版本，完整版下载地址：http://fileserve.mrcieu.ac.uk/ld/1kg.v3.tgz。</p></dd>
+<dd><p>字符串，基因型数据的plink文件前缀路径。勿使用MAF&gt;0.01版本，完整版下载地址：http://fileserve.mrcieu.ac.uk/ld/1kg.v3.tgz。</p></dd>
 
 
 <dt id="arg-sum-stats-">sum_stats1<a class="anchor" aria-label="anchor" href="#arg-sum-stats-"></a></dt>
-<dd><p>性状1 GWAS数据的文件路径，格式要求详见下面的details描述。若仅对单一区域分析，可使用'coloc_format_dat()'提取数据。</p></dd>
+<dd><p>字符串，性状1 GWAS数据的文件路径，格式要求详见下面的details描述。若仅对单一区域分析，可使用'coloc_format_dat()'提取数据。</p></dd>
 
 
 <dt id="arg-sum-stats-">sum_stats2<a class="anchor" aria-label="anchor" href="#arg-sum-stats-"></a></dt>
-<dd><p>性状2 GWAS数据的文件路径，格式要求详见下面的details描述。若仅对单一区域分析，可使用'coloc_format_dat()'提取数据。</p></dd>
+<dd><p>字符串，性状2 GWAS数据的文件路径，格式要求详见下面的details描述。若仅对单一区域分析，可使用'coloc_format_dat()'提取数据。</p></dd>
 
 
 <dt id="arg-p-cutoff-">p_cutoff1<a class="anchor" aria-label="anchor" href="#arg-p-cutoff-"></a></dt>
-<dd><p>性状1数据集的P值截断值，用于筛选显著的SNPs，默认为5e-8。</p></dd>
+<dd><p>数值，性状1数据集的P值截断值，用于筛选显著的SNPs，默认为5e-8。</p></dd>
 
 
 <dt id="arg-p-cutoff-">p_cutoff2<a class="anchor" aria-label="anchor" href="#arg-p-cutoff-"></a></dt>
-<dd><p>性状2数据集的P值截断值，用于筛选显著的SNPs，默认为5e-8。</p></dd>
+<dd><p>数值，性状2数据集的P值截断值，用于筛选显著的SNPs，默认为5e-8。</p></dd>
 
 
 <dt id="arg-chr">chr<a class="anchor" aria-label="anchor" href="#arg-chr"></a></dt>
-<dd><p>指定染色体编号，仅对参考基因型数据集中的该染色体上的SNPs进行分析。</p></dd>
+<dd><p>整数，指定染色体编号，仅对参考基因型数据集中的该染色体上的SNPs进行分析。</p></dd>
 
 
 <dt id="arg-top-snp">top_snp<a class="anchor" aria-label="anchor" href="#arg-top-snp"></a></dt>
-<dd><p>最大允许选择的SNP数量，默认值为1e10，意味着不限制SNP数量。</p></dd>
+<dd><p>数值，最大允许选择的SNP数量，默认值为1e10，意味着不限制SNP数量。</p></dd>
 
 
 <dt id="arg-ld-window">ld_window<a class="anchor" aria-label="anchor" href="#arg-ld-window"></a></dt>
-<dd><p>连锁不平衡（LD）窗口大小，单位为kb。当SNPs之间的距离超过该阈值时，认为它们不在连锁不平衡中，默认值为1e7。</p></dd>
+<dd><p>数值，连锁不平衡（LD）窗口大小，单位为kb。当SNPs之间的距离超过该阈值时，认为它们不在连锁不平衡中，默认值为1e7。</p></dd>
 
 
 <dt id="arg-collinear">collinear<a class="anchor" aria-label="anchor" href="#arg-collinear"></a></dt>
-<dd><p>SNPs之间的共线性阈值，若两个SNP的相关系数超过该值，则认为它们是共线性SNP，默认值为0.9。</p></dd>
+<dd><p>数值，SNPs之间的共线性阈值，若两个SNP的相关系数超过该值，则认为它们是共线性SNP，默认值为0.9。</p></dd>
 
 
 <dt id="arg-maf">maf<a class="anchor" aria-label="anchor" href="#arg-maf"></a></dt>
-<dd><p>最低等位基因频率（MAF）阈值，用于过滤参考基因型数据集中的SNPs，默认值为0.1。</p></dd>
+<dd><p>数值，最低等位基因频率（MAF）阈值，用于过滤参考基因型数据集中的SNPs，默认值为0.1。</p></dd>
 
 
 <dt id="arg-freq-threshold">freq_threshold<a class="anchor" aria-label="anchor" href="#arg-freq-threshold"></a></dt>
-<dd><p>参考基因型数据集中，SNP在两个表型数据集中的频率差异超过该阈值时，排除该SNP，默认值为0.2。</p></dd>
+<dd><p>数值，参考基因型数据集中，SNP在两个表型数据集中的频率差异超过该阈值时，排除该SNP，默认值为0.2。</p></dd>
 
 
 <dt id="arg-init-h-">init_h4<a class="anchor" aria-label="anchor" href="#arg-init-h-"></a></dt>
-<dd><p>初步共定位分析的H4值阈值。若初步分析的H4（即假设四种共定位模式的后验概率）达到该值，程序将提前停止，默认值为80（表示80%的概率）。设置为0时，程序将始终继续分析。</p></dd>
+<dd><p>数值，初步共定位分析的H4值阈值。若初步分析的H4（即假设四种共定位模式的后验概率）达到该值，程序将提前停止，默认值为80（表示80%的概率）。设置为0时，程序将始终继续分析。</p></dd>
 
 
 <dt id="arg-out-cond">out_cond<a class="anchor" aria-label="anchor" href="#arg-out-cond"></a></dt>
-<dd><p>是否保存条件分析后的数据为文本文件。默认为TRUE，表示保存。</p></dd>
+<dd><p>布尔值，是否保存条件分析后的数据为文本文件。默认为TRUE，表示保存。</p></dd>
 
 
 <dt id="arg-coloc-pp">coloc_pp<a class="anchor" aria-label="anchor" href="#arg-coloc-pp"></a></dt>
-<dd><p>三个先验概率P值的向量，表示在共定位分析中假设的先验概率，默认为c(1e-4, 1e-4, 1e-5)。</p></dd>
+<dd><p>数值向量，三个先验概率P值的向量，表示在共定位分析中假设的先验概率，默认为c(1e-4, 1e-4, 1e-5)。</p></dd>
 
 
 <dt id="arg-n-">n1<a class="anchor" aria-label="anchor" href="#arg-n-"></a></dt>
-<dd><p>性状1数据集的样本量大小，若sum_stats1数据已包含该列，可填写NULL。</p></dd>
+<dd><p>整数，性状1数据集的样本量大小，若sum_stats1数据已包含该列，可填写NULL。</p></dd>
 
 
 <dt id="arg-n-">n2<a class="anchor" aria-label="anchor" href="#arg-n-"></a></dt>
-<dd><p>性状2数据集的样本量大小，若sum_stats2数据已包含该列，可填写NULL。</p></dd>
+<dd><p>整数，性状2数据集的样本量大小，若sum_stats2数据已包含该列，可填写NULL。</p></dd>
 
 
 <dt id="arg-n-case">n1_case<a class="anchor" aria-label="anchor" href="#arg-n-case"></a></dt>
-<dd><p>性状1数据集中的病例数，若sum_stats1数据已包含该列或数据类型为连续型，可填写NULL。</p></dd>
+<dd><p>整数，性状1数据集中的病例数，若sum_stats1数据已包含该列或数据类型为连续型，可填写NULL。</p></dd>
 
 
 <dt id="arg-n-case">n2_case<a class="anchor" aria-label="anchor" href="#arg-n-case"></a></dt>
-<dd><p>性状2数据集中的病例数，若sum_stats2数据已包含该列或数据类型为连续型，可填写NULL。</p></dd>
+<dd><p>整数，性状2数据集中的病例数，若sum_stats2数据已包含该列或数据类型为连续型，可填写NULL。</p></dd>
 
 
 <dt id="arg-pve-">pve1<a class="anchor" aria-label="anchor" href="#arg-pve-"></a></dt>
-<dd><p>性状1数据集的表型方差解释（PVE）值，用于估算遗传预测的表型的方差贡献（如果适用），可填写NULL。</p></dd>
+<dd><p>数值，性状1数据集的表型方差解释（PVE）值，用于估算遗传预测的表型的方差贡献（如果适用），可填写NULL。</p></dd>
 
 
 <dt id="arg-pve-">pve2<a class="anchor" aria-label="anchor" href="#arg-pve-"></a></dt>
-<dd><p>性状2数据集的表型方差解释（PVE）值，用于估算遗传预测的表型的方差贡献（如果适用），可填写NULL。</p></dd>
+<dd><p>数值，性状2数据集的表型方差解释（PVE）值，用于估算遗传预测的表型的方差贡献（如果适用），可填写NULL。</p></dd>
 
 
 <dt id="arg-pve-file-">pve_file1<a class="anchor" aria-label="anchor" href="#arg-pve-file-"></a></dt>
-<dd><p>性状1数据集的PVE文件路径，用于指定表型方差解释的文件（如果适用），可填写NULL。</p></dd>
+<dd><p>字符串，性状1数据集的PVE文件路径，用于指定表型方差解释的文件（如果适用），可填写NULL。</p></dd>
 
 
 <dt id="arg-pve-file-">pve_file2<a class="anchor" aria-label="anchor" href="#arg-pve-file-"></a></dt>
-<dd><p>性状2数据集的PVE文件路径，用于指定表型方差解释的文件（如果适用），可填写NULL。</p></dd>
+<dd><p>字符串，性状2数据集的PVE文件路径，用于指定表型方差解释的文件（如果适用），可填写NULL。</p></dd>
 
 
 <dt id="arg-threads">threads<a class="anchor" aria-label="anchor" href="#arg-threads"></a></dt>
-<dd><p>可用的线程数，支持并行计算，默认值为8。</p></dd>
+<dd><p>整数，可用的线程数，支持并行计算，默认值为8。</p></dd>
 
 
 <dt id="arg-save-name">save_name<a class="anchor" aria-label="anchor" href="#arg-save-name"></a></dt>
-<dd><p>结果文件的保存名称前缀，默认为"pwcoco_out"。</p></dd>
+<dd><p>字符串，结果文件的保存名称前缀，默认为"pwcoco_out"。</p></dd>
 
 
 <dt id="arg-save-path">save_path<a class="anchor" aria-label="anchor" href="#arg-save-path"></a></dt>
-<dd><p>结果文件保存路径，默认为"./pwcoco"。</p></dd>
+<dd><p>字符串，结果文件保存路径，默认为"./pwcoco"。</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -237,7 +237,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer></div>

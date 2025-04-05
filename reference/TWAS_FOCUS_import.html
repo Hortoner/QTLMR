@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.43</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,39 +58,39 @@
 
 
 <dl><dt id="arg-import-help">import_help<a class="anchor" aria-label="anchor" href="#arg-import-help"></a></dt>
-<dd><p>是否调阅FOCUS软件import的帮助文档，默认FALSE。</p></dd>
+<dd><p>逻辑值，是否调阅FOCUS软件import的帮助文档，默认值为 <code>FALSE</code>。</p></dd>
 
 
 <dt id="arg-path">path<a class="anchor" aria-label="anchor" href="#arg-path"></a></dt>
-<dd><p>FUSION/PrediXcan的权重数据所在文件的路径，如"./WEIGHTS/GTExv8.EUR.Whole_Blood.nofilter.pos"。</p></dd>
+<dd><p>字符串，FUSION/PrediXcan的权重数据所在文件的路径，如<code>"./WEIGHTS/GTExv8.EUR.Whole_Blood.nofilter.pos"</code>。</p></dd>
 
 
 <dt id="arg-resource">resource<a class="anchor" aria-label="anchor" href="#arg-resource"></a></dt>
-<dd><p>权重数据文件来源，"fusion"或"PrediXcan"，默认"fusion"。</p></dd>
+<dd><p>字符串，权重数据文件来源，可以为"fusion"或"PrediXcan"，默认值为"fusion"。</p></dd>
 
 
 <dt id="arg-tissue">tissue<a class="anchor" aria-label="anchor" href="#arg-tissue"></a></dt>
-<dd><p>组织类型，如"Whole_Blood"。</p></dd>
+<dd><p>字符串，组织类型，如"Whole_Blood"。</p></dd>
 
 
 <dt id="arg-name">name<a class="anchor" aria-label="anchor" href="#arg-name"></a></dt>
-<dd><p>Name for expression reference panel (e.g., GTEx).</p></dd>
+<dd><p>字符串，表达参考面板的名称，例如"GTEx"。</p></dd>
 
 
 <dt id="arg-assay">assay<a class="anchor" aria-label="anchor" href="#arg-assay"></a></dt>
-<dd><p>Technology used to measure expression levels (e.g.,rnaseq)."rnaseq"或"array"。</p></dd>
+<dd><p>字符串，测量表达水平的技术类型，如"rnaseq"或"array"。</p></dd>
 
 
 <dt id="arg-opt-arguments">opt_arguments<a class="anchor" aria-label="anchor" href="#arg-opt-arguments"></a></dt>
-<dd><p>FOCUS软件import的其他命令行参数(设置test_help = TRUE查看参数)，默认NULL。</p></dd>
+<dd><p>字符串向量，FOCUS软件import的其他命令行参数（设置<code>test_help = TRUE</code>查看参数），默认值为<code>c("--use-ens-id", "--from-gencode")</code>。</p></dd>
 
 
 <dt id="arg-save-name">save_name<a class="anchor" aria-label="anchor" href="#arg-save-name"></a></dt>
-<dd><p>保存文件的文件名称。</p></dd>
+<dd><p>字符串，保存文件的文件名称。</p></dd>
 
 
 <dt id="arg-save-path">save_path<a class="anchor" aria-label="anchor" href="#arg-save-path"></a></dt>
-<dd><p>文件保存路径。</p></dd>
+<dd><p>字符串，文件保存路径。</p></dd>
 
 </dl></div>
 
@@ -103,7 +103,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer></div>

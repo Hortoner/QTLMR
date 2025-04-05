@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.43</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,14 +35,14 @@
     </div>
 
     <div class="ref-description section level2">
-    <p>软件官网：https://github.com/JonJala/mtag/。</p>
+    <p>软件官网：<a href="https://github.com/JonJala/mtag/" class="external-link">https://github.com/JonJala/mtag/</a>。</p>
     </div>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">MTAG_cross_gwas</span><span class="op">(</span></span>
 <span>  test_help <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>  GWASfile <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"./dat1.txt"</span>, <span class="st">"./dat1.txt"</span><span class="op">)</span>,</span>
+<span>  GWASfile <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"./dat1_MTAG.txt"</span>, <span class="st">"./dat2_MTAG.txt"</span><span class="op">)</span>,</span>
 <span>  snp_col <span class="op">=</span> <span class="st">"SNP"</span>,</span>
 <span>  effect_allele_col <span class="op">=</span> <span class="st">"effect_allele"</span>,</span>
 <span>  other_allele_col <span class="op">=</span> <span class="st">"other_allele"</span>,</span>
@@ -70,87 +70,87 @@
 
 
 <dl><dt id="arg-test-help">test_help<a class="anchor" aria-label="anchor" href="#arg-test-help"></a></dt>
-<dd><p>是否调阅MTAG软件mtag.py的帮助文档，默认FALSE。</p></dd>
+<dd><p>是否调阅MTAG软件mtag.py的帮助文档，默认为 <code>FALSE</code>。</p></dd>
 
 
 <dt id="arg-gwasfile">GWASfile<a class="anchor" aria-label="anchor" href="#arg-gwasfile"></a></dt>
-<dd><p>包含两个或多个GWAS数据文件的路径，可由format_dat()转换获得。</p></dd>
+<dd><p>字符串，包含两个或多个GWAS数据文件的路径，可由 <code><a href="format_dat.html">format_dat()</a></code> 转换获得。</p></dd>
 
 
 <dt id="arg-snp-col">snp_col<a class="anchor" aria-label="anchor" href="#arg-snp-col"></a></dt>
-<dd><p>SNP列的名称。</p></dd>
+<dd><p>字符串，SNP列的名称。</p></dd>
 
 
 <dt id="arg-effect-allele-col">effect_allele_col<a class="anchor" aria-label="anchor" href="#arg-effect-allele-col"></a></dt>
-<dd><p>效应等位基因列的名称。</p></dd>
+<dd><p>字符串，效应等位基因列的名称。</p></dd>
 
 
 <dt id="arg-other-allele-col">other_allele_col<a class="anchor" aria-label="anchor" href="#arg-other-allele-col"></a></dt>
-<dd><p>次要等位基因列的名称。</p></dd>
+<dd><p>字符串，次要等位基因列的名称。</p></dd>
 
 
 <dt id="arg-beta-col">beta_col<a class="anchor" aria-label="anchor" href="#arg-beta-col"></a></dt>
-<dd><p>β值列的名称。</p></dd>
+<dd><p>字符串，β值列的名称。</p></dd>
 
 
 <dt id="arg-se-col">se_col<a class="anchor" aria-label="anchor" href="#arg-se-col"></a></dt>
-<dd><p>标准误差列的名称。</p></dd>
+<dd><p>字符串，标准误差列的名称。</p></dd>
 
 
 <dt id="arg-pval-col">pval_col<a class="anchor" aria-label="anchor" href="#arg-pval-col"></a></dt>
-<dd><p>P值列的名称。</p></dd>
+<dd><p>字符串，P值列的名称。</p></dd>
 
 
 <dt id="arg-eaf-col">eaf_col<a class="anchor" aria-label="anchor" href="#arg-eaf-col"></a></dt>
-<dd><p>效应等位基因频率列的名称。</p></dd>
+<dd><p>字符串，效应等位基因频率列的名称。</p></dd>
 
 
 <dt id="arg-samplesize-col">samplesize_col<a class="anchor" aria-label="anchor" href="#arg-samplesize-col"></a></dt>
-<dd><p>样本量列的名称。</p></dd>
+<dd><p>字符串，样本量列的名称。</p></dd>
 
 
 <dt id="arg-zscores-col">Zscores_col<a class="anchor" aria-label="anchor" href="#arg-zscores-col"></a></dt>
-<dd><p>Z-scores列的名称。</p></dd>
+<dd><p>字符串，Z-scores列的名称。</p></dd>
 
 
 <dt id="arg-maf-min">maf_min<a class="anchor" aria-label="anchor" href="#arg-maf-min"></a></dt>
-<dd><p>默认0.01，用于过滤maf&lt;0.01的罕见SNP。</p></dd>
+<dd><p>数值，过滤maf&lt;0.01的罕见SNP，默认值为 <code>0.01</code>。</p></dd>
 
 
 <dt id="arg-merged-sig-pval">merged_sig_pval<a class="anchor" aria-label="anchor" href="#arg-merged-sig-pval"></a></dt>
-<dd><p>跨性状分析合并结果SNP的显著性阈值，默认5e-8，若设置为NULL则不合并数据。</p></dd>
+<dd><p>数值，跨性状分析合并结果SNP的显著性阈值，默认值为 <code>5e-8</code>，若设置为 <code>NULL</code> 则不合并数据。</p></dd>
 
 
 <dt id="arg-n-min">n_min<a class="anchor" aria-label="anchor" href="#arg-n-min"></a></dt>
-<dd><p>指定GWAS数据中SNP的样本量下限。</p></dd>
+<dd><p>数值，指定GWAS数据中SNP的样本量下限。</p></dd>
 
 
 <dt id="arg-no-overlap">no_overlap<a class="anchor" aria-label="anchor" href="#arg-no-overlap"></a></dt>
-<dd><p>假定在输入GWAS汇总统计数据之间没有样本重叠，默认为FALSE。</p></dd>
+<dd><p>逻辑值，假定在输入GWAS汇总统计数据之间没有样本重叠，默认为 <code>FALSE</code>。</p></dd>
 
 
 <dt id="arg-perfect-gencov">perfect_gencov<a class="anchor" aria-label="anchor" href="#arg-perfect-gencov"></a></dt>
-<dd><p>假定每个GWAS都是针对同一"性状"的不同测量值，默认为FALSE。</p></dd>
+<dd><p>逻辑值，假定每个GWAS都是针对同一"性状"的不同测量值，默认为 <code>FALSE</code>。</p></dd>
 
 
 <dt id="arg-equal-h-">equal_h2<a class="anchor" aria-label="anchor" href="#arg-equal-h-"></a></dt>
-<dd><p>假设所有性状传递给MTAG具有相同的遗传性，默认为FALSE。</p></dd>
+<dd><p>逻辑值，假设所有性状传递给MTAG具有相同的遗传性，默认为 <code>FALSE</code>。</p></dd>
 
 
 <dt id="arg-fdr">fdr<a class="anchor" aria-label="anchor" href="#arg-fdr"></a></dt>
-<dd><p>执行maxFDR分析，默认为TRUE。</p></dd>
+<dd><p>逻辑值，执行maxFDR分析，默认为 <code>TRUE</code>。</p></dd>
 
 
 <dt id="arg-opt-arguments">opt_arguments<a class="anchor" aria-label="anchor" href="#arg-opt-arguments"></a></dt>
-<dd><p>MTAG软件mtag.py的其他命令行参数(设置test_help = TRUE查看参数)，默认NULL。</p></dd>
+<dd><p>字符串，MTAG软件mtag.py的其他命令行参数（设置 <code>test_help = TRUE</code> 查看参数），默认 <code>NULL</code>。</p></dd>
 
 
 <dt id="arg-save-name">save_name<a class="anchor" aria-label="anchor" href="#arg-save-name"></a></dt>
-<dd><p>保存文件的文件名称。</p></dd>
+<dd><p>字符串，保存文件的文件名称。</p></dd>
 
 
 <dt id="arg-save-path">save_path<a class="anchor" aria-label="anchor" href="#arg-save-path"></a></dt>
-<dd><p>文件保存路径。</p></dd>
+<dd><p>字符串，文件保存路径，默认为 <code>"./"</code>。</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -167,7 +167,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer></div>
