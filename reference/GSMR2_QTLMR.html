@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.43</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,96 +71,96 @@
 
 
 <dl><dt id="arg-exposurefile">exposurefile<a class="anchor" aria-label="anchor" href="#arg-exposurefile"></a></dt>
-<dd><p>Twosample格式的完整暴露数据文件路径。</p></dd>
+<dd><p>字符串，Twosample格式的完整暴露数据文件路径。</p></dd>
 
 
 <dt id="arg-exposure-name">exposure_name<a class="anchor" aria-label="anchor" href="#arg-exposure-name"></a></dt>
-<dd><p>暴露性状的名称。</p></dd>
+<dd><p>字符串，暴露性状的名称。</p></dd>
 
 
 <dt id="arg-outcomefile">outcomefile<a class="anchor" aria-label="anchor" href="#arg-outcomefile"></a></dt>
-<dd><p>Twosample格式的完整结局数据文件路径。</p></dd>
+<dd><p>字符串，Twosample格式的完整结局数据文件路径。</p></dd>
 
 
 <dt id="arg-outcome-name">outcome_name<a class="anchor" aria-label="anchor" href="#arg-outcome-name"></a></dt>
-<dd><p>结局性状的名称。</p></dd>
+<dd><p>字符串，结局性状的名称。</p></dd>
 
 
 <dt id="arg-bfile-g">bfile_1000G<a class="anchor" aria-label="anchor" href="#arg-bfile-g"></a></dt>
-<dd><p>参考面板数据文件路径。</p></dd>
+<dd><p>字符串，参考面板数据文件路径。</p></dd>
 
 
 <dt id="arg-n-ref">n_ref<a class="anchor" aria-label="anchor" href="#arg-n-ref"></a></dt>
-<dd><p>参考面板数据的样本量。</p></dd>
+<dd><p>整数，参考面板数据的样本量。</p></dd>
 
 
 <dt id="arg-gwas-thresh">gwas_thresh<a class="anchor" aria-label="anchor" href="#arg-gwas-thresh"></a></dt>
-<dd><p>用于选择GWAS中工具变量SNP的p值显著阈值。</p></dd>
+<dd><p>数值，选择GWAS中工具变量SNP的p值显著性阈值。</p></dd>
 
 
 <dt id="arg-heidi-outlier-flag">heidi_outlier_flag<a class="anchor" aria-label="anchor" href="#arg-heidi-outlier-flag"></a></dt>
-<dd><p>TRUE或FALSE，是否进行HEIDI异常值分析。</p></dd>
+<dd><p>布尔值，是否进行HEIDI异常值分析（默认：TRUE）。</p></dd>
 
 
 <dt id="arg-single-snp-heidi-thresh">single_snp_heidi_thresh<a class="anchor" aria-label="anchor" href="#arg-single-snp-heidi-thresh"></a></dt>
-<dd><p>单个SNP的HEIDI异常值分析的p值阈值。</p></dd>
+<dd><p>数值，单个SNP的HEIDI异常值分析的p值阈值（默认：0.01）。</p></dd>
 
 
 <dt id="arg-multi-snps-heidi-thresh">multi_snps_heidi_thresh<a class="anchor" aria-label="anchor" href="#arg-multi-snps-heidi-thresh"></a></dt>
-<dd><p>多个SNP的HEIDI异常值分析的p值阈值。</p></dd>
+<dd><p>数值，多个SNP的HEIDI异常值分析的p值阈值（默认：0.01）。</p></dd>
 
 
 <dt id="arg-nsnps-thresh">nsnps_thresh<a class="anchor" aria-label="anchor" href="#arg-nsnps-thresh"></a></dt>
-<dd><p>GSMR分析所需的最小工具数（建议不要将该值设置为小于10）。</p></dd>
+<dd><p>整数，GSMR分析所需的最小工具数（建议不要将该值设置为小于10）。</p></dd>
 
 
 <dt id="arg-ld-r-thresh">ld_r2_thresh<a class="anchor" aria-label="anchor" href="#arg-ld-r-thresh"></a></dt>
-<dd><p>用于移除高LD SNP的LD r2阈值。</p></dd>
+<dd><p>数值，用于移除高LD SNP的LD r2阈值（默认：0.05）。</p></dd>
 
 
 <dt id="arg-ld-fdr-thresh">ld_fdr_thresh<a class="anchor" aria-label="anchor" href="#arg-ld-fdr-thresh"></a></dt>
-<dd><p>用于移除SNP工具间偶然相关性的FDR阈值。</p></dd>
+<dd><p>数值，用于移除SNP工具间偶然相关性的FDR阈值（默认：0.05）。</p></dd>
 
 
 <dt id="arg-gsmr-beta">gsmr2_beta<a class="anchor" aria-label="anchor" href="#arg-gsmr-beta"></a></dt>
-<dd><p>TRUE或FALSE，GSMR2测试版，包含一个新的HEIDI异常值方法（用于GSMR分析）。FALSE - 原始HEIDI异常值方法，TRUE - 新的HEIDI异常值方法。</p></dd>
+<dd><p>布尔值，GSMR2测试版，包含一个新的HEIDI异常值方法（用于GSMR分析）（默认：FALSE）。</p></dd>
 
 
 <dt id="arg-gsmr-plot">GSMR_plot<a class="anchor" aria-label="anchor" href="#arg-gsmr-plot"></a></dt>
-<dd><p>TRUE或FALSE，是否绘制GSMR结果数据图。</p></dd>
+<dd><p>布尔值，是否绘制GSMR结果数据图（默认：TRUE）。</p></dd>
 
 
 <dt id="arg-width">width<a class="anchor" aria-label="anchor" href="#arg-width"></a></dt>
-<dd><p>绘制生成的PDF宽度。</p></dd>
+<dd><p>数值，绘制生成的PDF宽度（默认：6）。</p></dd>
 
 
 <dt id="arg-height">height<a class="anchor" aria-label="anchor" href="#arg-height"></a></dt>
-<dd><p>绘制生成的PDF高度。</p></dd>
+<dd><p>数值，绘制生成的PDF高度（默认：5）。</p></dd>
 
 
 <dt id="arg-suppresswarnings">suppressWarnings<a class="anchor" aria-label="anchor" href="#arg-suppresswarnings"></a></dt>
-<dd><p>TRUE或FALSE，是否抑制GSMR警告信息提示。</p></dd>
+<dd><p>布尔值，是否抑制GSMR警告信息提示（默认：TRUE）。</p></dd>
 
 
 <dt id="arg-bi-gsmr">Bi_GSMR<a class="anchor" aria-label="anchor" href="#arg-bi-gsmr"></a></dt>
-<dd><p>TRUE或FALSE，是否进行双向GSMR分析。</p></dd>
+<dd><p>布尔值，是否进行双向GSMR分析（默认：TRUE）。</p></dd>
 
 
 <dt id="arg-save-name">save_name<a class="anchor" aria-label="anchor" href="#arg-save-name"></a></dt>
-<dd><p>保存结果文件的名称。</p></dd>
+<dd><p>字符串，保存结果文件的名称（默认："GSMR2"）。</p></dd>
 
 
 <dt id="arg-save-path">save_path<a class="anchor" aria-label="anchor" href="#arg-save-path"></a></dt>
-<dd><p>保存的结果文件路径。</p></dd>
+<dd><p>字符串，保存结果文件路径（默认："./GSMR2"）。</p></dd>
 
 
 <dt id="arg-thread-num">thread_num<a class="anchor" aria-label="anchor" href="#arg-thread-num"></a></dt>
-<dd><p>GCTA并行运行线程数量。</p></dd>
+<dd><p>整数，GCTA并行运行线程数量（默认：10）。</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>GSMR分析结果。</p>
+    <p>返回GSMR分析结果。</p>
     </div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -172,7 +172,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer></div>

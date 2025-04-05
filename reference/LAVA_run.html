@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.43</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,55 +68,55 @@
 
 
 <dl><dt id="arg-gwasfile">GWASfile<a class="anchor" aria-label="anchor" href="#arg-gwasfile"></a></dt>
-<dd><p>包含两个MTAG格式的GWAS数据文件的路径，如c("./XXX_MTAG.txt", "./XXX_MTAG_IEU.txt")，可由format_dat()转换获得，注意：GWAS数据的人类参考基因组版本需转换为GRCh37。</p></dd>
+<dd><p>字符串，包含两个或多个MTAG格式的GWAS数据文件的路径，如c("./XXX_MTAG.txt", "./XXX_MTAG_IEU.txt")，可由format_dat()转换获得。GWAS数据的人类参考基因组版本需转换为GRCh37。</p></dd>
 
 
 <dt id="arg-gwas-name">GWAS_name<a class="anchor" aria-label="anchor" href="#arg-gwas-name"></a></dt>
-<dd><p>GWAS 文件对应的性状名称向量。每个名称与 <code>GWASfile</code> 中的文件一一对应。</p></dd>
+<dd><p>字符串向量，GWAS 文件对应的性状名称，每个名称与 <code>GWASfile</code> 中的文件一一对应。</p></dd>
 
 
 <dt id="arg-cases">cases<a class="anchor" aria-label="anchor" href="#arg-cases"></a></dt>
-<dd><p>每个性状的病例样本数向量，与 <code>GWAS_name</code> 中的性状一一对应，如c(1000,NA,1200)，连续型GWAS数据的中的病例样本数为NA。</p></dd>
+<dd><p>整数向量，每个性状的病例样本数，按 <code>GWAS_name</code> 中性状的顺序提供。连续型GWAS数据中的病例样本数可为NA。</p></dd>
 
 
 <dt id="arg-controls">controls<a class="anchor" aria-label="anchor" href="#arg-controls"></a></dt>
-<dd><p>每个性状的对照样本数向量，与 <code>GWAS_name</code> 中的性状一一对应，如c(3000,NA,36000)，连续型GWAS数据的中的对照样本数为NA。</p></dd>
+<dd><p>整数向量，每个性状的对照样本数，按 <code>GWAS_name</code> 中性状的顺序提供。连续型GWAS数据中的对照样本数可为NA。</p></dd>
 
 
 <dt id="arg-sample-overlap-file">sample_overlap_file<a class="anchor" aria-label="anchor" href="#arg-sample-overlap-file"></a></dt>
-<dd><p>样本重叠信息文件的路径，描述 GWAS 样本间的重叠情况，使用LAVA_sample_overlap()函数获取。无样本重叠时，可以填写NULL。</p></dd>
+<dd><p>字符串，描述 GWAS 样本间重叠情况的文件路径，可使用LAVA_sample_overlap()函数获取。若无样本重叠，可填写NULL。</p></dd>
 
 
 <dt id="arg-ref-prefix">ref_prefix<a class="anchor" aria-label="anchor" href="#arg-ref-prefix"></a></dt>
-<dd><p>基因组参考数据的文件前缀，例如 1KG 欧洲人群的参考文件。下载地址：https://cncr.nl/research/lava/，与MAGMA分析的输入文件一致。</p></dd>
+<dd><p>字符串，基因组参考数据的文件前缀，如1KG欧洲人群参考文件。下载地址：https://cncr.nl/research/lava/。</p></dd>
 
 
 <dt id="arg-loci-file">loci_file<a class="anchor" aria-label="anchor" href="#arg-loci-file"></a></dt>
-<dd><p>位点信息文件的路径，包含基因组块划分信息（如染色体、起始位置、终止位置和 SNP 列表）。下载地址：https://github.com/josefin-werme/LAVA/blob/main/support_data/blocks_s2500_m25_f1_w200.GRCh37_hg19.locfile。</p></dd>
+<dd><p>字符串，位点信息文件的路径，包含基因组块划分信息（如染色体、起始位置、终止位置和SNP列表）。下载地址：https://github.com/josefin-werme/LAVA/blob/main/support_data/blocks_s2500_m25_f1_w200.GRCh37_hg19.locfile。</p></dd>
 
 
 <dt id="arg-loci-num">loci_num<a class="anchor" aria-label="anchor" href="#arg-loci-num"></a></dt>
-<dd><p>要分析的位点范围（起始和终止的索引号），如c(1,100)。若为 NULL 则分析文件中的所有位点。</p></dd>
+<dd><p>整数向量，指定要分析的位点范围（起始和终止的索引号），如c(1,100)。若为NULL，则分析文件中的所有位点。</p></dd>
 
 
 <dt id="arg-phenos">phenos<a class="anchor" aria-label="anchor" href="#arg-phenos"></a></dt>
-<dd><p>要分析的表型子集及其顺序。如果为NULL，将分析位点对象中的所有表型（按位点对象中列出的顺序）。</p></dd>
+<dd><p>字符串向量，要分析的表型子集及其顺序。若为NULL，则分析位点对象中的所有表型（按位点对象中列出的顺序）。</p></dd>
 
 
 <dt id="arg-target">target<a class="anchor" aria-label="anchor" href="#arg-target"></a></dt>
-<dd><p>感兴趣的目标表型。如果为NULL，将计算所有表型对之间的双变量相关性；否则，将仅计算目标表型与其他所有表型之间的双变量相关性。</p></dd>
+<dd><p>字符串，感兴趣的目标表型。如果为NULL，将计算所有表型对之间的双变量相关性；否则，将仅计算目标表型与其他所有表型之间的双变量相关性。</p></dd>
 
 
 <dt id="arg-min-k">min.K<a class="anchor" aria-label="anchor" href="#arg-min-k"></a></dt>
-<dd><p>处理位点所需的最小主成分（PC）数量（不能少于 2）。如果不满足此条件，函数将失败，无法分析该位点。</p></dd>
+<dd><p>整数，处理位点所需的最小主成分（PC）数量（至少为 2）。若不满足此条件，函数将失败。</p></dd>
 
 
 <dt id="arg-prune-thresh">prune.thresh<a class="anchor" aria-label="anchor" href="#arg-prune-thresh"></a></dt>
-<dd><p>主成分选择时的累计解释方差阈值（百分比），默认值为 99。</p></dd>
+<dd><p>数字，主成分选择时的累计解释方差阈值（百分比），默认值为 99。</p></dd>
 
 
 <dt id="arg-max-prop-k">max.prop.K<a class="anchor" aria-label="anchor" href="#arg-max-prop-k"></a></dt>
-<dd><p>主成分数量的上限，占输入数据最小样本量的比例，默认值为 0.75。</p></dd>
+<dd><p>数字，主成分数量的上限，占输入数据最小样本量的比例，默认值为 0.75。</p></dd>
 
 
 <dt id="arg-drop-failed">drop.failed<a class="anchor" aria-label="anchor" href="#arg-drop-failed"></a></dt>
@@ -124,29 +124,28 @@
 
 
 <dt id="arg-univ-p-thresh">univ.p.thresh<a class="anchor" aria-label="anchor" href="#arg-univ-p-thresh"></a></dt>
-<dd><p>单变量测试的显著性阈值，用于筛选满足局部遗传力要求的性状，默认为0.05，建议0.05/2495。</p></dd>
+<dd><p>数字，单变量测试的显著性阈值，筛选满足局部遗传力要求的性状。默认值为 0.05，建议设置为 0.05/2495。</p></dd>
 
 
 <dt id="arg-adap-thresh">adap.thresh<a class="anchor" aria-label="anchor" href="#arg-adap-thresh"></a></dt>
-<dd><p>自适应阈值向量，用于调整 p 值生成的迭代次数。默认值为 <code>c(1e-04, 1e-06)</code>。默认迭代次数为 1e+4，但当 p 值低于这些阈值时，将增加到 1e+5 和 1e+6。
-如果设为 NULL，最大迭代次数将限制为默认值（注意：这会显著加速分析，但会降低低 p 值时的准确性）。</p></dd>
+<dd><p>数字向量，自适应阈值，用于调整 p 值生成的迭代次数。默认值为 <code>c(1e-04, 1e-06)</code>。默认迭代次数为 1e+4，若 p 值低于这些阈值，将增加到 1e+5 或 1e+6。若为 NULL，最大迭代次数将限制为默认值。</p></dd>
 
 
 <dt id="arg-param-lim">param.lim<a class="anchor" aria-label="anchor" href="#arg-param-lim"></a></dt>
-<dd><p>参数估计的阈值，超出该正负阈值的估计参数将被认为不可靠，将被设置为 NA，默认值为 1.25。</p></dd>
+<dd><p>数字，参数估计的阈值，超出该正负阈值的估计参数将被视为不可靠并设置为 NA。默认值为 1.25。</p></dd>
 
 
 <dt id="arg-save-path">save_path<a class="anchor" aria-label="anchor" href="#arg-save-path"></a></dt>
-<dd><p>保存分析结果的路径，默认值为当前目录的 <code>./LAVA</code>。</p></dd>
+<dd><p>字符串，保存分析结果的路径，默认值为当前目录的 <code>./LAVA</code>。</p></dd>
 
 
 <dt id="arg-cores">cores<a class="anchor" aria-label="anchor" href="#arg-cores"></a></dt>
-<dd><p>并行计算时使用的核心数。默认值为 4。</p></dd>
+<dd><p>整数，进行并行计算时使用的核心数。默认值为 4。</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>双变量分析结果。</p>
+    <p>数据框，双变量遗传相关性分析的结果。</p>
     </div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -158,7 +157,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer></div>

@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.43</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,6 +68,7 @@
 <span>  Twosample_dat <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  SMR_dat <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  MTAG_dat <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  GWASinspector_dat <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  METAL_dat <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  GWAS_name <span class="op">=</span> <span class="st">"GWAS"</span>,</span>
 <span>  save_path <span class="op">=</span> <span class="st">"./"</span></span>
@@ -79,128 +80,132 @@
 
 
 <dl><dt id="arg-dat">dat<a class="anchor" aria-label="anchor" href="#arg-dat"></a></dt>
-<dd><p>读入至R环境中的GWAS数据或GWAS文件路径。</p></dd>
+<dd><p>数据框或字符串，读入至R环境中的GWAS数据或GWAS文件路径。</p></dd>
 
 
 <dt id="arg-type">type<a class="anchor" aria-label="anchor" href="#arg-type"></a></dt>
-<dd><p>指定数据转换的类型，<code>"exposure"</code>或<code>"outcome"</code>。默认为<code>"exposure"</code>。</p></dd>
+<dd><p>字符串，指定数据转换的类型，<code>"exposure"</code>或<code>"outcome"</code>。默认为<code>"exposure"</code>。</p></dd>
 
 
 <dt id="arg-snps">snps<a class="anchor" aria-label="anchor" href="#arg-snps"></a></dt>
-<dd><p>需要提取的SNP。如果为NULL，则不提取任何SNP并保留所有数据。默认为<code>NULL</code>。</p></dd>
+<dd><p>字符串向量，需提取的SNP。如果为NULL，则不提取任何SNP并保留所有数据。默认为<code>NULL</code>。</p></dd>
 
 
 <dt id="arg-header">header<a class="anchor" aria-label="anchor" href="#arg-header"></a></dt>
-<dd><p>数据是否包含标题。默认为<code>TRUE</code>。</p></dd>
+<dd><p>布尔值，数据是否包含标题，默认为<code>TRUE</code>。</p></dd>
 
 
 <dt id="arg-phenotype-col">phenotype_col<a class="anchor" aria-label="anchor" href="#arg-phenotype-col"></a></dt>
-<dd><p>可选的列名，表示SNP对应的表型名称。默认为<code>"Phenotype"</code>。</p></dd>
+<dd><p>字符串，可选，表示SNP对应的表型名称。默认为<code>"Phenotype"</code>。</p></dd>
 
 
 <dt id="arg-snp-col">snp_col<a class="anchor" aria-label="anchor" href="#arg-snp-col"></a></dt>
-<dd><p>必填，包含rsid数据的列名。默认为<code>"SNP"</code>。</p></dd>
+<dd><p>字符串，必填，包含rsid数据的列名。默认为<code>"SNP"</code>。</p></dd>
 
 
 <dt id="arg-beta-col">beta_col<a class="anchor" aria-label="anchor" href="#arg-beta-col"></a></dt>
-<dd><p>必填，效应值大小列名。默认为<code>"beta"</code>。</p></dd>
+<dd><p>字符串，必填，效应值大小列名。默认为<code>"beta"</code>。</p></dd>
 
 
 <dt id="arg-se-col">se_col<a class="anchor" aria-label="anchor" href="#arg-se-col"></a></dt>
-<dd><p>必填，标准误列名。默认为<code>"se"</code>。</p></dd>
+<dd><p>字符串，必填，标准误列名。默认为<code>"se"</code>。</p></dd>
 
 
 <dt id="arg-eaf-col">eaf_col<a class="anchor" aria-label="anchor" href="#arg-eaf-col"></a></dt>
-<dd><p>非必填，效应等位基因频率列名，注意：此列数据缺失，可能影响后续分析。默认为<code>"eaf"</code>。</p></dd>
+<dd><p>字符串，非必填，效应等位基因频率列名。默认为<code>"eaf"</code>。若数据缺失，可能影响后续分析。</p></dd>
 
 
 <dt id="arg-effect-allele-col">effect_allele_col<a class="anchor" aria-label="anchor" href="#arg-effect-allele-col"></a></dt>
-<dd><p>必填，效应等位基因列名。默认为<code>"effect_allele"</code>。</p></dd>
+<dd><p>字符串，必填，效应等位基因列名。默认为<code>"effect_allele"</code>。</p></dd>
 
 
 <dt id="arg-other-allele-col">other_allele_col<a class="anchor" aria-label="anchor" href="#arg-other-allele-col"></a></dt>
-<dd><p>必填，非效应等位基因列名。默认为<code>"other_allele"</code>。</p></dd>
+<dd><p>字符串，必填，非效应等位基因列名。默认为<code>"other_allele"</code>。</p></dd>
 
 
 <dt id="arg-pval-col">pval_col<a class="anchor" aria-label="anchor" href="#arg-pval-col"></a></dt>
-<dd><p>必填，统计学差异显著性检验指标p值列名。默认为<code>"pval"</code>。</p></dd>
+<dd><p>字符串，必填，P值列名，表示统计学差异显著性检验指标。默认为<code>"pval"</code>。</p></dd>
 
 
 <dt id="arg-units-col">units_col<a class="anchor" aria-label="anchor" href="#arg-units-col"></a></dt>
-<dd><p>可选填的列名，表示单位。默认为<code>"units"</code>。</p></dd>
+<dd><p>字符串，可选，表示单位的列名。默认为<code>"units"</code>。</p></dd>
 
 
 <dt id="arg-ncase-col">ncase_col<a class="anchor" aria-label="anchor" href="#arg-ncase-col"></a></dt>
-<dd><p>可选填的列名，表示病例数。默认为<code>"ncase"</code>。</p></dd>
+<dd><p>字符串，可选，表示病例数的列名。默认为<code>"ncase"</code>。</p></dd>
 
 
 <dt id="arg-ncontrol-col">ncontrol_col<a class="anchor" aria-label="anchor" href="#arg-ncontrol-col"></a></dt>
-<dd><p>可选填的列名，表示对照数。默认为<code>"ncontrol"</code>。</p></dd>
+<dd><p>字符串，可选，表示对照数的列名。默认为<code>"ncontrol"</code>。</p></dd>
 
 
 <dt id="arg-samplesize-col">samplesize_col<a class="anchor" aria-label="anchor" href="#arg-samplesize-col"></a></dt>
-<dd><p>可选填的列名，表示样本量。默认为<code>"samplesize"</code>。</p></dd>
+<dd><p>字符串，可选，表示样本量的列名。默认为<code>"samplesize"</code>。</p></dd>
 
 
 <dt id="arg-gene-col">gene_col<a class="anchor" aria-label="anchor" href="#arg-gene-col"></a></dt>
-<dd><p>可选填的列名，表示基因名称。默认为<code>"gene"</code>。</p></dd>
+<dd><p>字符串，可选，表示基因名称的列名。默认为<code>"gene"</code>。</p></dd>
 
 
 <dt id="arg-id-col">id_col<a class="anchor" aria-label="anchor" href="#arg-id-col"></a></dt>
-<dd><p>可选填的列名，默认为<code>"id"</code>。</p></dd>
+<dd><p>字符串，可选，表示样本ID的列名。默认为<code>"id"</code>。</p></dd>
 
 
 <dt id="arg-min-pval">min_pval<a class="anchor" aria-label="anchor" href="#arg-min-pval"></a></dt>
-<dd><p>允许的最小p值。默认为<code>1e-200</code>。</p></dd>
+<dd><p>数值，允许的最小p值。默认为<code>1e-200</code>。</p></dd>
 
 
 <dt id="arg-z-col">z_col<a class="anchor" aria-label="anchor" href="#arg-z-col"></a></dt>
-<dd><p>可选填的列名，Z分数的列名。默认为<code>"z"</code>。</p></dd>
+<dd><p>字符串，可选，表示Z分数的列名。默认为<code>"z"</code>。</p></dd>
 
 
 <dt id="arg-info-col">info_col<a class="anchor" aria-label="anchor" href="#arg-info-col"></a></dt>
-<dd><p>可选填的列名，默认为<code>"info_col"</code>。</p></dd>
+<dd><p>字符串，可选，表示信息列名。默认为<code>"info"</code>。</p></dd>
 
 
 <dt id="arg-chr-col">chr_col<a class="anchor" aria-label="anchor" href="#arg-chr-col"></a></dt>
-<dd><p>可选填的列名，染色体的列名。默认为<code>"chr_col"</code>。建议填写。</p></dd>
+<dd><p>字符串，可选，表示染色体的列名。默认为<code>"chr"</code>，建议填写。</p></dd>
 
 
 <dt id="arg-pos-col">pos_col<a class="anchor" aria-label="anchor" href="#arg-pos-col"></a></dt>
-<dd><p>可选填的列名，坐标的列名。默认为<code>"pos"</code>。建议填写。</p></dd>
+<dd><p>字符串，可选，表示坐标的列名。默认为<code>"pos"</code>，建议填写。</p></dd>
 
 
 <dt id="arg-log-pval">log_pval<a class="anchor" aria-label="anchor" href="#arg-log-pval"></a></dt>
-<dd><p>指定p值是否为-log10(P)。默认为<code>FALSE</code>。</p></dd>
+<dd><p>布尔值，指定p值是否为-log10(P)。默认为<code>FALSE</code>。</p></dd>
 
 
 <dt id="arg-twosample-dat">Twosample_dat<a class="anchor" aria-label="anchor" href="#arg-twosample-dat"></a></dt>
-<dd><p>指定是否保存TwosampleMR数据文件，默认为<code>FALSE</code>。</p></dd>
+<dd><p>布尔值，指定是否保存TwosampleMR数据文件，默认为<code>FALSE</code>。</p></dd>
 
 
 <dt id="arg-smr-dat">SMR_dat<a class="anchor" aria-label="anchor" href="#arg-smr-dat"></a></dt>
-<dd><p>指定是否保存SMR数据文件，默认为<code>FALSE</code>。</p></dd>
+<dd><p>布尔值，指定是否保存SMR数据文件，默认为<code>FALSE</code>。</p></dd>
 
 
 <dt id="arg-mtag-dat">MTAG_dat<a class="anchor" aria-label="anchor" href="#arg-mtag-dat"></a></dt>
-<dd><p>TRUE或FALSE，是否保存MTAG分析输入数据文件，默认为<code>FALSE</code>。</p></dd>
+<dd><p>布尔值，指定是否保存MTAG分析输入数据文件，默认为<code>FALSE</code>。</p></dd>
+
+
+<dt id="arg-gwasinspector-dat">GWASinspector_dat<a class="anchor" aria-label="anchor" href="#arg-gwasinspector-dat"></a></dt>
+<dd><p>布尔值，指定是否保存GWASinspector分析输入数据文件，默认为<code>FALSE</code>。</p></dd>
 
 
 <dt id="arg-metal-dat">METAL_dat<a class="anchor" aria-label="anchor" href="#arg-metal-dat"></a></dt>
-<dd><p>指定是否保存metal分析输入数据文件，默认为<code>FALSE</code>。</p></dd>
+<dd><p>布尔值，指定是否保存METAL分析输入数据文件，默认为<code>FALSE</code>。</p></dd>
 
 
 <dt id="arg-gwas-name">GWAS_name<a class="anchor" aria-label="anchor" href="#arg-gwas-name"></a></dt>
-<dd><p>指定输出文件名称。</p></dd>
+<dd><p>字符串，指定输出文件名称。</p></dd>
 
 
 <dt id="arg-save-path">save_path<a class="anchor" aria-label="anchor" href="#arg-save-path"></a></dt>
-<dd><p>指定输出文件将保存的目录，默认当前工作路径下。</p></dd>
+<dd><p>字符串，指定输出文件保存的目录，默认为当前工作路径。</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>Twosample格式数据</p>
+    <p>返回TwosampleMR格式数据。</p>
     </div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -212,7 +217,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer></div>

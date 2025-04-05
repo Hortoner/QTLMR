@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.43</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,35 +62,35 @@
 
 
 <dt id="arg-ld-path">LD.path<a class="anchor" aria-label="anchor" href="#arg-ld-path"></a></dt>
-<dd><p>存储连锁不平衡（LD）信息的目录路径。</p></dd>
+<dd><p>字符型，存储连锁不平衡（LD）信息的目录路径。</p></dd>
 
 
 <dt id="arg-nref">Nref<a class="anchor" aria-label="anchor" href="#arg-nref"></a></dt>
-<dd><p>用于计算LD的参考样本的样本量。如果使用默认的UK Biobank参考样本，则Nref = 335265。</p></dd>
+<dd><p>整数，用于计算LD的参考样本的样本量。如果使用默认的UK Biobank参考样本，则Nref = 335265。</p></dd>
 
 
 <dt id="arg-eigen-cut">eigen.cut<a class="anchor" aria-label="anchor" href="#arg-eigen-cut"></a></dt>
-<dd><p>用于HDL的LD分数矩阵中的特征值和特征向量。用户可指定0到1之间的数值。例如，eigen.cut = 0.99表示使用解释99％方差的主特征值及其对应的特征向量。如果使用默认的“自动”选项，将选择能够提供最稳定遗传力估计的eigen.cut。</p></dd>
+<dd><p>字符型或数值，用于HDL的LD分数矩阵中的特征值和特征向量。用户可指定0到1之间的数值。例如，eigen.cut = 0.99表示使用解释99％方差的主特征值及其对应的特征向量。如果使用默认的“自动”选项，将选择能够提供最稳定遗传力估计的eigen.cut。</p></dd>
 
 
 <dt id="arg-intercept-output">intercept.output<a class="anchor" aria-label="anchor" href="#arg-intercept-output"></a></dt>
-<dd><p>逻辑值，默认为FALSE。是否在estimates.df中包含截距项？</p></dd>
+<dd><p>布尔值，默认为FALSE。是否在estimates.df中包含截距项。</p></dd>
 
 
 <dt id="arg-fill-missing-n">fill.missing.N<a class="anchor" aria-label="anchor" href="#arg-fill-missing-n"></a></dt>
-<dd><p>如果为NULL（默认值），则缺失N的SNP将被移除。可以指定“median”、“min”或“max”以填充缺失的N。例如，“median”表示使用有N值的SNP的中位数来填充缺失的N。</p></dd>
+<dd><p>字符型或NULL，如果为NULL（默认值），则缺失N的SNP将被移除。可以指定“median”、“min”或“max”以填充缺失的N。例如，“median”表示使用有N值的SNP的中位数来填充缺失的N。</p></dd>
 
 
 <dt id="arg-lim">lim<a class="anchor" aria-label="anchor" href="#arg-lim"></a></dt>
-<dd><p>公差限制，默认lim = exp(-18)。</p></dd>
+<dd><p>数值，公差限制，默认lim = exp(-18)。</p></dd>
 
 
 <dt id="arg-save-name">save_name<a class="anchor" aria-label="anchor" href="#arg-save-name"></a></dt>
-<dd><p>保存文件的文件名称。</p></dd>
+<dd><p>字符型，保存文件的文件名称。</p></dd>
 
 
 <dt id="arg-save-path">save_path<a class="anchor" aria-label="anchor" href="#arg-save-path"></a></dt>
-<dd><p>文件保存路径。</p></dd>
+<dd><p>字符型，文件保存路径，默认"./HDL"。</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -129,7 +129,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer></div>

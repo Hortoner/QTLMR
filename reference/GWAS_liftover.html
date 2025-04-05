@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.43</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,51 +66,51 @@
 
 
 <dt id="arg-build-from">build_from<a class="anchor" aria-label="anchor" href="#arg-build-from"></a></dt>
-<dd><p>GWAS数据的版本，支持"GRCh38/hg38"或"GRCh37/hg19"。</p></dd>
+<dd><p>字符串，GWAS数据的版本，支持"GRCh38/hg38"或"GRCh37/hg19"。</p></dd>
 
 
 <dt id="arg-build-to">build_to<a class="anchor" aria-label="anchor" href="#arg-build-to"></a></dt>
-<dd><p>转换后的GWAS数据版本，支持"GRCh38/hg38"或"GRCh37/hg19"。</p></dd>
+<dd><p>字符串，转换后的GWAS数据版本，支持"GRCh38/hg38"或"GRCh37/hg19"。</p></dd>
 
 
 <dt id="arg-chain-file">chain_file<a class="anchor" aria-label="anchor" href="#arg-chain-file"></a></dt>
-<dd><p>链文件路径，用于基因组版本转换，例如"./GRCh38_to_GRCh37.chain"。默认为NULL时，则自动下载。</p></dd>
+<dd><p>字符串，链文件路径，用于基因组版本转换，例如"./GRCh38_to_GRCh37.chain"。默认为NULL时，则自动下载。</p></dd>
 
 
 <dt id="arg-chain-source">chain_source<a class="anchor" aria-label="anchor" href="#arg-chain-source"></a></dt>
-<dd><p>链文件来源，可选"ensembl"或"ucsc"，默认为"ensembl"。</p></dd>
+<dd><p>字符串，链文件来源，可选"ensembl"或"ucsc"，默认为"ensembl"。</p></dd>
 
 
 <dt id="arg-imputation-ind">imputation_ind<a class="anchor" aria-label="anchor" href="#arg-imputation-ind"></a></dt>
-<dd><p>是否对丢失的位置信息进行插补，默认为FALSE。</p></dd>
+<dd><p>布尔值，是否对丢失的位置信息进行插补，默认为FALSE。</p></dd>
 
 
 <dt id="arg-chrom-col">chrom_col<a class="anchor" aria-label="anchor" href="#arg-chrom-col"></a></dt>
-<dd><p>GWAS数据中染色体列的列名，默认为"CHR"。</p></dd>
+<dd><p>字符串，GWAS数据中染色体列的列名，默认为"CHR"。</p></dd>
 
 
 <dt id="arg-start-col">start_col<a class="anchor" aria-label="anchor" href="#arg-start-col"></a></dt>
-<dd><p>GWAS数据中起始位点列的列名，默认为"BP"。</p></dd>
+<dd><p>字符串，GWAS数据中起始位点列的列名，默认为"BP"。</p></dd>
 
 
 <dt id="arg-as-granges">as_granges<a class="anchor" aria-label="anchor" href="#arg-as-granges"></a></dt>
-<dd><p>是否返回GRanges对象，默认为FALSE。</p></dd>
+<dd><p>布尔值，是否返回GRanges对象，默认为FALSE。</p></dd>
 
 
 <dt id="arg-style">style<a class="anchor" aria-label="anchor" href="#arg-style"></a></dt>
-<dd><p>输出数据的基因组风格，支持"NCBI"或"UCSC"，默认为"NCBI"。</p></dd>
+<dd><p>字符串，输出数据的基因组风格，支持"NCBI"或"UCSC"，默认为"NCBI"。</p></dd>
 
 
 <dt id="arg-verbose">verbose<a class="anchor" aria-label="anchor" href="#arg-verbose"></a></dt>
-<dd><p>是否打印详细信息，默认为TRUE。</p></dd>
+<dd><p>布尔值，是否打印详细信息，默认为TRUE。</p></dd>
 
 
 <dt id="arg-save-name">save_name<a class="anchor" aria-label="anchor" href="#arg-save-name"></a></dt>
-<dd><p>分析结果保存文件名。</p></dd>
+<dd><p>字符串，分析结果保存文件名。</p></dd>
 
 
 <dt id="arg-save-path">save_path<a class="anchor" aria-label="anchor" href="#arg-save-path"></a></dt>
-<dd><p>分析结果保存路径，默认NULL，则不保存文件。</p></dd>
+<dd><p>字符串，分析结果保存路径，默认为NULL，则不保存文件。</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -127,7 +127,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer></div>

@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">QTLMR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.41</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.43</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,15 +62,15 @@
 
 
 <dl><dt id="arg-gwasfile">GWASfile<a class="anchor" aria-label="anchor" href="#arg-gwasfile"></a></dt>
-<dd><p>包含两个MTAG格式的GWAS数据文件的路径，如c("./XXX_MTAG.txt", "./XXX_MTAG_IEU.txt")，可由format_dat()转换获得。</p></dd>
+<dd><p>字符串，包含两个MTAG格式的GWAS数据文件的路径，如c("./XXX_MTAG.txt", "./XXX_MTAG_IEU.txt")，可由format_dat()转换获得。</p></dd>
 
 
 <dt id="arg-ld-path">LD.path<a class="anchor" aria-label="anchor" href="#arg-ld-path"></a></dt>
-<dd><p>存储连锁不平衡（LD）信息的目录路径。</p></dd>
+<dd><p>字符串，存储连锁不平衡（LD）信息的目录路径。</p></dd>
 
 
 <dt id="arg-nref">Nref<a class="anchor" aria-label="anchor" href="#arg-nref"></a></dt>
-<dd><p>用于计算LD的参考样本的样本量。如果使用默认的UK Biobank参考样本，则Nref = 335265。</p></dd>
+<dd><p>数值，用于计算LD的参考样本的样本量。如果使用默认的UK Biobank参考样本，则Nref = 335265。</p></dd>
 
 
 <dt id="arg-n-">N0<a class="anchor" aria-label="anchor" href="#arg-n-"></a></dt>
@@ -78,11 +78,11 @@
 
 
 <dt id="arg-numcores">numCores<a class="anchor" aria-label="anchor" href="#arg-numcores"></a></dt>
-<dd><p>使用的核心数量。</p></dd>
+<dd><p>整数，使用的核心数量。</p></dd>
 
 
 <dt id="arg-eigen-cut">eigen.cut<a class="anchor" aria-label="anchor" href="#arg-eigen-cut"></a></dt>
-<dd><p>用于HDL的LD分数矩阵中的特征值和特征向量。用户可指定0到1之间的数值。例如，eigen.cut = 0.99表示使用解释99％方差的主特征值及其对应的特征向量。如果使用默认的“自动”选项，将选择能够提供最稳定遗传力估计的eigen.cut。</p></dd>
+<dd><p>数值或字符串，用于HDL的LD分数矩阵中的特征值和特征向量。用户可指定0到1之间的数值。例如，eigen.cut = 0.99表示使用解释99％方差的主特征值及其对应的特征向量。如果使用默认的“自动”选项，将选择能够提供最稳定遗传力估计的eigen.cut。</p></dd>
 
 
 <dt id="arg-jackknife-df">jackknife.df<a class="anchor" aria-label="anchor" href="#arg-jackknife-df"></a></dt>
@@ -94,11 +94,11 @@
 
 
 <dt id="arg-fill-missing-n">fill.missing.N<a class="anchor" aria-label="anchor" href="#arg-fill-missing-n"></a></dt>
-<dd><p>若为NULL（默认值），则缺失N的SNP将被移除。可以指定“median”、“min”或“max”来填充缺失的N。例如，“median”表示使用有N值的SNP的中位数填充缺失的N。</p></dd>
+<dd><p>字符串或NULL，缺失N的SNP如何处理。如果为NULL（默认值），则缺失N的SNP将被移除。可以指定“median”、“min”或“max”来填充缺失的N。例如，“median”表示使用有N值的SNP的中位数填充缺失的N。</p></dd>
 
 
 <dt id="arg-lim">lim<a class="anchor" aria-label="anchor" href="#arg-lim"></a></dt>
-<dd><p>公差限制，默认lim = exp(-18)。</p></dd>
+<dd><p>数值，公差限制，默认lim = exp(-18)。</p></dd>
 
 
 <dt id="arg-verbose">verbose<a class="anchor" aria-label="anchor" href="#arg-verbose"></a></dt>
@@ -106,11 +106,11 @@
 
 
 <dt id="arg-save-name">save_name<a class="anchor" aria-label="anchor" href="#arg-save-name"></a></dt>
-<dd><p>保存文件的文件名称。</p></dd>
+<dd><p>字符串，保存文件的文件名称。</p></dd>
 
 
 <dt id="arg-save-path">save_path<a class="anchor" aria-label="anchor" href="#arg-save-path"></a></dt>
-<dd><p>文件保存路径。</p></dd>
+<dd><p>字符串，文件保存路径。</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -150,7 +150,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer></div>
